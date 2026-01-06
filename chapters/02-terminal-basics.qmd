@@ -1,0 +1,180 @@
+# Getting Started with the Terminal
+
+The Terminal might look intimidating---a blank screen with a blinking cursor, waiting for commands. But you only need to know a handful of things to work effectively with Claude Code.
+
+Think of the Terminal as a text-based way to navigate your computer and run programs. Instead of clicking on folders and files, you type commands. That's really all it is.
+
+## Opening Terminal
+
+There are several ways to open Terminal on macOS:
+
+1. **Spotlight Search**: Press `Cmd + Space`, type "Terminal", and press Enter
+2. **Applications folder**: Open Finder → Applications → Utilities → Terminal
+3. **Launchpad**: Click Launchpad, search for "Terminal"
+
+When Terminal opens, you'll see something like this:
+
+```
+yourname@your-mac ~ %
+```
+
+This is called the **prompt**. It's waiting for you to type a command. The `~` symbol represents your home folder.
+
+## The Five Commands You Need
+
+You don't need to memorize dozens of Terminal commands. These five will cover almost everything you'll do.
+
+### 1. `pwd` --- Where Am I?
+
+`pwd` stands for "print working directory." It tells you which folder you're currently in.
+
+```bash
+pwd
+```
+
+Output might look like:
+
+```
+/Users/yourname
+```
+
+This is your "home" folder---where your Documents, Downloads, and Desktop folders live.
+
+### 2. `ls` --- What's Here?
+
+`ls` lists the contents of the current folder.
+
+```bash
+ls
+```
+
+Output might look like:
+
+```
+Applications    Documents    Downloads    Desktop    Pictures
+```
+
+These are the folders (and files) in your current location.
+
+### 3. `cd` --- Go Somewhere
+
+`cd` stands for "change directory." It moves you to a different folder.
+
+```bash
+cd Documents
+```
+
+Now you're in your Documents folder. Use `pwd` to confirm:
+
+```bash
+pwd
+```
+
+```
+/Users/yourname/Documents
+```
+
+**Helpful shortcuts:**
+
+- `cd ~` takes you back to your home folder
+- `cd ..` moves up one level (to the parent folder)
+- `cd -` goes back to wherever you were before
+
+### 4. `mkdir` --- Create a Folder
+
+`mkdir` creates a new folder (directory).
+
+```bash
+mkdir my-project
+```
+
+This creates a folder called "my-project" inside your current location. Use `ls` to see it:
+
+```bash
+ls
+```
+
+```
+my-project    other-stuff    some-file.txt
+```
+
+### 5. Arrow Keys --- Recall Previous Commands
+
+This isn't technically a command, but it's essential: use the **up arrow** key to cycle through commands you've typed before. This saves you from retyping the same things over and over.
+
+- **Up arrow**: Previous command
+- **Down arrow**: Next command (if you've gone back)
+
+## Setting Up Your Project Folder
+
+Let's create a dedicated place for your project. We'll put it in a "Projects" folder inside your home directory.
+
+First, go to your home folder:
+
+```bash
+cd ~
+```
+
+Create a Projects folder (if it doesn't exist):
+
+```bash
+mkdir Projects
+```
+
+If the folder already exists, you'll see an error---that's fine, just continue.
+
+Go into that folder:
+
+```bash
+cd Projects
+```
+
+Create your project folder (replace "my-app" with your project name):
+
+```bash
+mkdir my-app
+```
+
+Go into your project folder:
+
+```bash
+cd my-app
+```
+
+Verify where you are:
+
+```bash
+pwd
+```
+
+```
+/Users/yourname/Projects/my-app
+```
+
+You're now in your project folder. This is where Claude Code will work.
+
+## A Note on Spaces in Names
+
+Avoid spaces in folder and file names. Use hyphens or underscores instead:
+
+- Good: `my-project`, `my_project`
+- Avoid: `my project`, `My Project`
+
+Spaces in names require special handling in the Terminal and can cause headaches. Keep it simple.
+
+## That's It (For Now)
+
+Those five things (`pwd`, `ls`, `cd`, `mkdir`, and arrow keys) are all the Terminal knowledge you need to get started. Claude Code handles everything else.
+
+In the next chapter, we'll give you a few commands to copy and paste for installing tools. You don't need to understand exactly how they work---just run them and move on.
+
+Depending on your project, you may encounter other commands later---tools for running servers, managing databases, or working with specific technologies. Don't worry about learning these upfront. Claude Code will introduce them as needed and explain what they do.
+
+:::{.callout-tip}
+## Example Prompt
+"I'm in my project folder. What do I do next?"
+:::
+
+When you get stuck or confused in the Terminal, you can always ask Claude Code for help. It can explain what's happening and guide you through any Terminal-related task.
+
+In the next chapter, we'll install Claude Code itself.

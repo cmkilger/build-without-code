@@ -1,0 +1,33 @@
+project:
+  type: book
+  output-dir: _output
+
+book:
+  title: "Build Without Code"
+  subtitle: "A Non-Technical Guide to Creating Apps with AI"
+  author: "Cory Kilger"
+  date: today
+  chapters:
+    - index.qmd
+    - chapters/01-introduction.qmd
+    - chapters/02-terminal-basics.qmd
+    - chapters/03-installing-claude-code.qmd
+    - chapters/04-understanding-landscape.qmd
+    - chapters/05-designing-with-ai.qmd
+    - chapters/06-version-control.qmd
+    - chapters/07-building.qmd
+    - chapters/08-running-testing.qmd
+    - chapters/09-quality-assurance.qmd
+    - chapters/10-deploying.qmd
+    - chapters/11-growing-project.qmd
+
+format:
+  html:
+    theme: cosmo
+    toc: true
+    toc-depth: 2
+  pdf:
+    documentclass: book
+    toc: true
+    toc-depth: 2
+    colorlinks: true

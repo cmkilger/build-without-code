@@ -1,0 +1,167 @@
+# Installing Claude Code
+
+Before we can start building, we need to install Claude Code and a few tools it depends on. This chapter walks through each step.
+
+Don't worry if you don't understand what these tools do---you won't need to interact with them directly after installation. They're just prerequisites that Claude Code needs to run.
+
+## Step 1: Install Homebrew
+
+Homebrew is a tool that makes it easy to install other software on your Mac. Think of it as an app store for developer tools, but one that works from the Terminal.
+
+Open Terminal and paste this command:
+
+```bash
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
+
+:::{.callout-note}
+If this command doesn't work, visit [brew.sh](https://brew.sh) for the current installation instructions.
+:::
+
+Press Enter. The installation will:
+
+1. Ask for your Mac's password (the one you use to log in)
+2. Show you what it's going to do and ask you to press Enter to continue
+3. Download and install Homebrew
+
+This might take a few minutes. When it's done, you'll see instructions to run a couple of additional commands. **Follow those instructions**---they're different for each Mac, so I can't list them here exactly.
+
+To verify Homebrew is installed:
+
+```bash
+brew --version
+```
+
+You should see a version number like `Homebrew 4.x.x`.
+
+## Step 2: Install Node.js
+
+Node.js is a runtime that allows programs written in JavaScript to run on your computer. Claude Code is built with JavaScript, so it needs Node.js to work.
+
+With Homebrew installed, this is simple:
+
+```bash
+brew install node
+```
+
+Wait for it to finish, then verify:
+
+```bash
+node --version
+```
+
+You should see something like `v20.x.x` or `v22.x.x`. Any recent version is fine.
+
+## Step 3: Install Claude Code
+
+Now for the main event. Install Claude Code with this command:
+
+```bash
+npm install -g @anthropic-ai/claude-code
+```
+
+:::{.callout-note}
+For the latest installation instructions, visit the [Claude Code documentation](https://docs.anthropic.com/en/docs/claude-code).
+:::
+
+Let's break this down:
+
+- `npm` is Node's package manager (it came with Node.js)
+- `install -g` means "install globally" so you can use it from anywhere
+- `@anthropic-ai/claude-code` is the Claude Code package
+
+After installation, verify it works:
+
+```bash
+claude --version
+```
+
+You should see a version number.
+
+## Step 4: First Launch
+
+Navigate to your project folder (the one we created in the previous chapter):
+
+```bash
+cd ~/Projects/my-app
+```
+
+Now launch Claude Code:
+
+```bash
+claude
+```
+
+The first time you run Claude Code, it will ask you to authenticate. This connects Claude Code to your Anthropic account.
+
+Follow the prompts:
+
+1. Claude Code will open a browser window (or give you a URL to open)
+2. Log in to your Anthropic account (or create one if you don't have one)
+3. Authorize Claude Code to access your account
+4. Return to the Terminal
+
+Once authenticated, you'll see Claude Code's interface---a prompt where you can type messages and get responses.
+
+## Step 5: Verify Everything Works
+
+Let's make sure everything is set up correctly.
+
+:::{.callout-tip}
+## Example Prompt
+"Help me verify that everything is installed correctly. Check that I have Node.js, npm, and git available."
+:::
+
+Claude Code will run some checks and let you know if anything is missing. If something isn't working, it will suggest how to fix it.
+
+## Understanding the Interface
+
+When Claude Code is running, you'll see a prompt that looks something like:
+
+```
+>
+```
+
+Type your message and press Enter. Claude Code will respond, potentially running commands or creating files as needed.
+
+Some useful things to know:
+
+- Type `/help` to see available commands
+- Type `/exit` or press `Ctrl+C` (or `Ctrl+D`) to quit Claude Code
+- Press `Esc` to cancel Claude Code mid-response if it's going in the wrong direction
+- Claude Code remembers the context of your conversation within a session
+- Use `/resume` to continue a previous session where you left off
+
+## What Just Happened?
+
+You installed three things:
+
+1. **Homebrew**: A package manager that makes installing software easy
+2. **Node.js**: The runtime that Claude Code needs to execute
+3. **Claude Code**: The AI-powered development tool itself
+
+You won't need to think about Homebrew or Node.js again. They're just infrastructure that makes Claude Code possible.
+
+## If Something Went Wrong
+
+Installation issues are common and usually fixable. Here are some things to try:
+
+**"Command not found" errors after installing Homebrew:**
+Close Terminal completely and open a new window. Sometimes Terminal needs to restart to recognize new commands.
+
+**Permission errors:**
+Try prefixing the command with `sudo` (e.g., `sudo npm install -g @anthropic-ai/claude-code`). This runs the command with administrator privileges. You'll need to enter your password.
+
+**Authentication problems:**
+Make sure you have an active internet connection and that you've created an Anthropic account at [anthropic.com](https://anthropic.com).
+
+:::{.callout-tip}
+## Example Prompt
+"I got this error when trying to install: [paste the error]. What should I do?"
+:::
+
+When in doubt, ask Claude Code. Even if it's not fully installed yet, you can use Claude (the web version at claude.ai) to troubleshoot installation issues.
+
+## Next Steps
+
+With Claude Code installed and working, you're ready to start building. But first, let's make sure you understand the landscape---what a "tech stack" is and what the pieces of a modern application look like.

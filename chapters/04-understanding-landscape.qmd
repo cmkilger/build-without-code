@@ -1,0 +1,165 @@
+# Understanding the Landscape
+
+Before you start building, it helps to understand what you're building *with*. This chapter introduces the vocabulary and concepts you'll encounter when discussing your project with AI.
+
+You don't need to understand how any of this works technically. You just need to know what the pieces are and what they do, so you can make informed decisions and ask good questions.
+
+## What Is a "Tech Stack"?
+
+A tech stack is the combination of technologies used to build an application. It's like the ingredients in a recipe---different choices produce different results, and some combinations work better together than others.
+
+When someone asks "What's your tech stack?", they're asking about the specific tools, languages, and services your application uses.
+
+For a typical web application, the stack might include:
+
+- A frontend framework (what users see)
+- A backend language and framework (the logic behind the scenes)
+- A database (where data is stored)
+- A hosting service (where it all runs)
+
+Don't worry about picking the "right" stack yet. That's what the next chapter is for. For now, let's understand what each piece does.
+
+## The Building Blocks
+
+### Frontend: What Users See
+
+The **frontend** is everything a user interacts with---buttons, forms, images, text, animations. When you use an app on your phone or visit a website, you're looking at the frontend.
+
+What frontends are built with depends on the platform:
+
+- **Web apps** use HTML (structure), CSS (styling), and JavaScript (interactivity)
+- **iOS apps** use Swift or frameworks like SwiftUI
+- **Android apps** use Kotlin or frameworks like Jetpack Compose
+- **Cross-platform mobile apps** use frameworks like React Native or Flutter, which let you write once and run on both iOS and Android
+
+Modern applications often use **frameworks**---pre-built collections of code that handle common tasks. Popular web frameworks include React, Vue, and Svelte.
+
+You don't need to know how to write any of this. You just need to know that when Claude Code talks about "the frontend," it means the user-facing part of your application.
+
+### Backend: The Brain
+
+The **backend** is the part users never see. It's the logic that processes requests, enforces rules, and coordinates everything.
+
+When you log into an app, the backend checks your password. When you submit an order, the backend validates it, charges your card, and updates the inventory. When you scroll through a feed, the backend decides what content to show you.
+
+Backends are written in programming languages like JavaScript (Node.js), Python, Go, or Ruby. Like frontends, they often use frameworks to handle common patterns.
+
+The backend typically:
+
+- Receives requests from the frontend
+- Processes those requests (validates data, applies business logic)
+- Communicates with the database
+- Sends responses back to the frontend
+
+### Database: Where Data Lives
+
+A **database** stores your application's data---user accounts, posts, products, orders, everything that needs to persist when someone closes the app.
+
+There are two main types:
+
+**Relational databases** (like PostgreSQL or MySQL) organize data into tables with rows and columns, similar to spreadsheets. Data in different tables can be linked together. These are great when your data has clear structure and relationships.
+
+**Document databases** (like MongoDB) store data as flexible documents, similar to JSON files. These are more flexible when your data structure might change or varies between records.
+
+For most projects, either type works fine. AI can help you choose based on your specific needs.
+
+### Hosting: Making It Accessible
+
+Your application needs to run somewhere. **Hosting** is where your code lives and executes so users can access it.
+
+Options range from:
+
+- **Simple platforms** (like Vercel, Netlify, or Railway) that handle most complexity for you
+- **Cloud providers** (like AWS, Google Cloud, or Azure) that offer more control but more complexity
+- **Traditional servers** that you manage entirely yourself
+
+For beginners, simple platforms are the way to go. They're designed to make deployment easy.
+
+## Web vs. Mobile
+
+Your application might be a website, a mobile app, or both. Here's how they differ:
+
+### Web Applications
+
+Web apps run in a browser. Users access them by typing a URL or clicking a link. They work on any device with a browser---computers, tablets, phones.
+
+**Advantages:**
+
+- No app store approval needed
+- Easy to update (changes appear instantly for everyone)
+- Users don't need to install anything
+
+**Disadvantages:**
+
+- Can't access all device features (like some phone sensors)
+- Users must be online to use them (usually)
+- May feel less "native" on mobile devices
+
+### Native Mobile Apps
+
+Native apps are installed on a phone or tablet from an app store (Apple's App Store or Google Play). They're built specifically for that platform.
+
+**Advantages:**
+
+- Can access all device features
+- Can work offline
+- Feel natural and responsive on the device
+- Users can find them in app stores
+
+**Disadvantages:**
+
+- Must be approved by app stores (Apple is stricter)
+- Updates require users to download new versions
+- Typically need separate code for iOS and Android
+
+### Cross-Platform Mobile Apps
+
+Cross-platform frameworks let you write one codebase that works on both iOS and Android. React Native and Flutter are popular choices.
+
+**Advantages:**
+
+- One codebase for both platforms
+- Faster development than building twice
+- Still access most device features
+
+**Disadvantages:**
+
+- May not feel quite as native as platform-specific apps
+- Some complex features may require platform-specific code
+- Still need to deal with both app stores
+
+### Progressive Web Apps (PWAs)
+
+PWAs are web apps that can be "installed" on a phone and work somewhat like native apps. They're a middle ground between web and native.
+
+**Advantages:**
+
+- One codebase works everywhere
+- Can work offline
+- No app store approval needed
+
+**Disadvantages:**
+
+- Limited device feature access
+- Not as discoverable as app store apps
+- iOS support is more limited than Android
+
+## Why This Matters
+
+When you sit down with AI to design your project, you'll need to make decisions about these components. The goal isn't to become an expert---it's to understand enough to have a productive conversation.
+
+If AI suggests "using React for the frontend and Node.js for the backend with PostgreSQL for the database, deployed on Railway," you now know what that means:
+
+- **React**: A framework for building what users see
+- **Node.js**: A way to run JavaScript on the server for backend logic
+- **PostgreSQL**: A relational database for storing data
+- **Railway**: A hosting platform that makes deployment easy
+
+You don't need to understand *how* any of these work. You just need to understand *what role* each plays.
+
+:::{.callout-tip}
+## Example Prompt
+"I want to build an app where users can create accounts, post photos, and follow other users. What technology choices do I need to make, and what would you recommend? Please explain the trade-offs."
+:::
+
+In the next chapter, we'll use AI to design your specific project---making these decisions based on your actual needs and goals.

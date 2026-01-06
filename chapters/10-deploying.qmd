@@ -1,0 +1,228 @@
+# Deploying Your Project
+
+Your application works on your computer. Now it's time to make it accessible to the world. Deployment means putting your code on a server where anyone can access it.
+
+This chapter covers the concepts and walks you through the process with Claude Code's help.
+
+## What Deployment Means
+
+When your application runs locally, it's only accessible on your computer. Deployment involves:
+
+1. **Uploading your code** to a server somewhere on the internet
+2. **Running the application** on that server
+3. **Connecting a domain** (like myapp.com) so people can find it
+
+The specifics depend on what you're deploying---web applications, mobile apps, and backends each have their own processes.
+
+## Things You'll Need to Do Yourself
+
+Some steps require you to create accounts or take actions that Claude Code can't do for you:
+
+- **Create accounts** on hosting platforms
+- **Enter payment information** (many have free tiers, but require a card on file)
+- **Verify your identity** for certain services
+- **Purchase a domain name** (if you want a custom one)
+- **Accept terms of service** and agreements
+
+Claude Code will tell you when these steps are needed and guide you through them.
+
+## Web Application Deployment
+
+For web applications, several platforms make deployment straightforward:
+
+### Popular Platforms
+
+**Vercel**: Excellent for frontend applications and Next.js projects. Very generous free tier.
+
+**Netlify**: Similar to Vercel, great for static sites and frontend apps.
+
+**Railway**: Good for full-stack applications with backends and databases. Pay-as-you-go pricing.
+
+**Render**: Similar to Railway, supports many languages and frameworks.
+
+**Fly.io**: Good for applications that need to be close to users globally.
+
+You don't need to research all of these. Ask Claude Code:
+
+:::{.callout-tip}
+## Example Prompt
+"What's the best platform to deploy this application? Consider our tech stack, the free tier limits, and ease of deployment for a beginner."
+:::
+
+### The Deployment Process
+
+Once you've chosen a platform and created an account:
+
+:::{.callout-tip}
+## Example Prompt
+"Help me deploy this application to [platform name]. Walk me through each step."
+:::
+
+The general process usually involves:
+
+1. **Connecting your GitHub repository** to the platform
+2. **Configuring build settings** (how to compile your code)
+3. **Setting environment variables** (secrets like API keys)
+4. **Triggering the first deployment**
+
+Claude Code will handle the technical configuration. You'll handle the clicking and account authorization.
+
+### Environment Variables
+
+Your application probably has secrets---API keys, database passwords, etc. These shouldn't be in your code (they'd be visible on GitHub).
+
+Instead, they go in **environment variables**, which each hosting platform lets you configure:
+
+:::{.callout-tip}
+## Example Prompt
+"What environment variables does this application need? Help me set them up on [platform]."
+:::
+
+### Custom Domains
+
+Hosting platforms give you a free URL (like `my-app.vercel.app`), but you probably want your own domain (like `myapp.com`).
+
+1. **Buy a domain** from a registrar like Namecheap, Cloudflare, or Squarespace Domains
+2. **Configure DNS** to point to your hosting platform
+3. **Set up the domain** in your hosting platform's settings
+
+:::{.callout-tip}
+## Example Prompt
+"I bought the domain myapp.com from Namecheap. Help me connect it to my Vercel deployment."
+:::
+
+This process can be confusing, but Claude Code can guide you through the specific steps.
+
+## Mobile App Deployment
+
+Mobile apps are more complex because they go through app stores.
+
+### Apple App Store (iOS)
+
+To publish on the App Store, you need:
+
+- **Apple Developer Account**: $99/year
+- **App Store Connect access**: Comes with the developer account
+- **Xcode**: To build and submit the app
+- **App metadata**: Screenshots, descriptions, privacy policy
+
+The submission process involves:
+
+1. Preparing your app for release (different from development builds)
+2. Creating the app listing in App Store Connect
+3. Uploading the app binary
+4. Submitting for review
+
+Apple reviews every app submission. This can take a few days, and they may reject apps that don't meet their guidelines.
+
+:::{.callout-tip}
+## Example Prompt
+"I want to submit this iOS app to the App Store. What do I need to prepare, and what steps do I follow?"
+:::
+
+### Google Play Store (Android)
+
+Google's process is similar but generally faster:
+
+- **Google Play Developer Account**: $25 one-time fee
+- **Play Console access**: Comes with the developer account
+- **App metadata**: Screenshots, descriptions, privacy policy
+
+Google's review process is typically faster than Apple's, but they still check for policy compliance.
+
+:::{.callout-tip}
+## Example Prompt
+"Walk me through submitting this Android app to the Google Play Store."
+:::
+
+### Cross-Platform Considerations
+
+If you built with React Native, Flutter, or another cross-platform framework, you'll need to submit to both stores separately. The code is shared, but the submission process is not.
+
+## Backend and Database Deployment
+
+If your application has a backend (server-side code) or database, these need to be deployed too.
+
+### Backend Hosting
+
+Platforms like Railway, Render, and Fly.io can host your backend alongside your database. The deployment process is similar to frontend deployment---connect your repo and configure settings.
+
+### Database Hosting
+
+Your database needs to live somewhere accessible:
+
+- **Managed databases** from your hosting platform (Railway, Render, etc.)
+- **Dedicated database services** like Supabase, PlanetScale, or MongoDB Atlas
+- **All-in-one platforms** that include database hosting
+
+:::{.callout-tip}
+## Example Prompt
+"How should I set up the production database? What hosting option would you recommend for this project?"
+:::
+
+### Connecting Everything
+
+In production, your frontend needs to talk to your backend, which needs to talk to your database. Claude Code will help configure these connections:
+
+:::{.callout-tip}
+## Example Prompt
+"My frontend is deployed on Vercel and my backend is on Railway. Help me configure them to communicate properly."
+:::
+
+## After Deployment
+
+### Monitoring
+
+Once deployed, you should know if something goes wrong:
+
+- Most platforms have built-in error logging
+- Consider adding error tracking services like Sentry
+- Set up alerts for critical issues
+
+:::{.callout-tip}
+## Example Prompt
+"How can I monitor this application for errors after deployment? What should I set up?"
+:::
+
+### Updating Your Application
+
+When you make changes:
+
+1. Make your changes locally
+2. Test thoroughly
+3. Commit and push to GitHub
+4. Most platforms will automatically redeploy
+
+:::{.callout-tip}
+## Example Prompt
+"I've made some changes and pushed them to GitHub. How do I deploy the new version?"
+:::
+
+### SSL Certificates
+
+SSL certificates make your site use `https://` instead of `http://`---the secure version. Most modern hosting platforms handle this automatically. If yours doesn't:
+
+:::{.callout-tip}
+## Example Prompt
+"I need to set up SSL/HTTPS for my site. How do I do this on [platform]?"
+:::
+
+## Costs
+
+Deployment has costs, though many platforms offer free tiers:
+
+- **Hosting**: Free to start, scales with usage
+- **Domain**: ~$10-15/year for common extensions
+- **Apple Developer Account**: $99/year
+- **Google Play Account**: $25 one-time
+- **Database**: Free to start, scales with usage
+
+Budget around $100-150/year for a modest production application, plus app store fees if you're building mobile apps.
+
+## Celebrate
+
+Getting an application deployed is a significant achievement. You've taken an idea, turned it into code, and made it available to the world.
+
+Take a moment to appreciate this. Then start thinking about what comes next.
+
+In the final chapter, we'll discuss how to grow your project over time---adding features, fixing issues, and evolving your application.

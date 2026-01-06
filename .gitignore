@@ -1,0 +1,5 @@
+/.quarto/
+/_output/
+**/*.quarto_ipynb
+.claude/settings.local.json
+.DS_Store

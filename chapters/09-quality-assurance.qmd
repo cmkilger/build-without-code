@@ -1,0 +1,189 @@
+# Quality Assurance with AI
+
+Claude Code can write code quickly, but speed isn't everything. Code should also be secure, maintainable, and free of obvious bugs. This chapter covers how to have Claude Code review and improve its own work.
+
+Think of this as quality control at the factory---checking the work before it ships.
+
+## Why Review Matters
+
+AI-generated code can have issues:
+
+- **Security vulnerabilities**: Ways for attackers to exploit your application
+- **Bugs**: Edge cases that weren't handled
+- **Inefficiencies**: Code that works but could be better
+- **Inconsistencies**: Different parts of the code doing similar things in different ways
+
+Having Claude Code review its work catches many of these issues before they cause problems.
+
+## Self-Review
+
+After implementing a feature, ask Claude Code to review what it just created:
+
+:::{.callout-tip}
+## Example Prompt
+"Review the code you just wrote. Are there any bugs, edge cases we didn't handle, or improvements you'd suggest?"
+:::
+
+This often catches issues Claude Code didn't think about during initial implementation. It's looking at the code with fresh eyes.
+
+Another useful approach:
+
+:::{.callout-tip}
+## Example Prompt
+"Look at the changes we made today. Is there anything that could break or cause problems? Be critical."
+:::
+
+Explicitly asking for criticism helps surface concerns Claude Code might otherwise not mention.
+
+## Security Review
+
+Security deserves special attention. Even simple applications can have vulnerabilities that expose user data or allow unauthorized access.
+
+:::{.callout-tip}
+## Example Prompt
+"Review this project for security vulnerabilities. Check for common issues like:
+- Exposed secrets or API keys
+- SQL injection or other injection attacks
+- Cross-site scripting (XSS)
+- Authentication and authorization problems
+- Insecure data handling"
+:::
+
+You don't need to understand these terms. Claude Code does, and will check for them.
+
+Some common security issues it might find:
+
+- **Hardcoded secrets**: Passwords or API keys written directly in code (should be in environment variables)
+- **Missing input validation**: Not checking that user input is safe before using it
+- **Exposed sensitive data**: Accidentally sending private information to the browser
+- **Weak authentication**: Password requirements that are too lenient, or sessions that don't expire
+
+When Claude Code finds issues, it will explain the risk and suggest fixes.
+
+## Code Quality Review
+
+Beyond security, code quality affects how easy your project is to maintain and extend:
+
+:::{.callout-tip}
+## Example Prompt
+"Review the codebase for quality issues:
+- Duplicated code that could be consolidated
+- Overly complex functions that should be simplified
+- Inconsistent patterns or naming conventions
+- Things that might confuse a developer later"
+:::
+
+Clean code is easier to modify later. Taking time to improve quality now saves time later.
+
+## Simplification
+
+Sometimes code becomes more complex than necessary as features are added:
+
+:::{.callout-tip}
+## Example Prompt
+"Look at how we implemented [feature]. Is there a simpler way to do this? I want to keep the code as straightforward as possible."
+:::
+
+Simpler code has fewer bugs, is easier to understand, and is easier to change. If Claude Code can accomplish the same thing with less complexity, that's usually better.
+
+## Asking "What Could Go Wrong?"
+
+A powerful question for quality assurance:
+
+:::{.callout-tip}
+## Example Prompt
+"What could go wrong with this application? Think about:
+- What if the database is unavailable?
+- What if a user enters unexpected data?
+- What if two users try to do the same thing at once?
+- What if the network is slow or unreliable?"
+:::
+
+This surfaces scenarios you might not have considered. Claude Code can then add appropriate error handling.
+
+## Performance Review
+
+If your application feels slow, ask about performance:
+
+:::{.callout-tip}
+## Example Prompt
+"The page takes a while to load. Can you review the code and identify what might be making it slow? Suggest optimizations."
+:::
+
+Performance issues often come from:
+
+- Fetching too much data at once
+- Making too many database queries
+- Loading large images or files
+- Running expensive calculations on every page load
+
+Claude Code can identify and fix these patterns.
+
+## Documentation
+
+Good documentation helps you (and Claude Code) understand the project later:
+
+:::{.callout-tip}
+## Example Prompt
+"Add comments to the code explaining what the non-obvious parts do. Don't over-comment simple things, but explain the business logic and any tricky parts."
+:::
+
+You probably won't read these comments, but Claude Code will when you come back to the project later. It helps it understand the intent behind the code.
+
+## Automated Testing
+
+Professional developers write tests---code that automatically verifies other code works correctly. You can have Claude Code do this too:
+
+:::{.callout-tip}
+## Example Prompt
+"Write automated tests for the user registration feature. Cover the normal case and important edge cases."
+:::
+
+Tests serve as:
+
+- **Verification**: Proof that the code works
+- **Documentation**: Examples of how the code should behave
+- **Safety net**: They'll alert you if future changes break existing functionality
+
+:::{.callout-tip}
+## Example Prompt
+"Run the tests and fix any that are failing."
+:::
+
+You don't need to understand how to write tests. Just know that having them is valuable, and Claude Code can create and run them.
+
+## When to Review
+
+Good times to run quality checks:
+
+- **After completing a feature**: Before committing, do a quick review
+- **Before deployment**: Thorough review before going live
+- **Periodically**: Every few sessions, do a broader codebase review
+- **When something feels off**: If something seems wrong, investigate
+
+Quality assurance isn't a one-time thing. It's an ongoing practice.
+
+## Don't Skip This
+
+It's tempting to skip reviews when things seem to be working. Resist this temptation.
+
+Issues found now are easy to fix. Issues found after users are using your application are harder and more embarrassing. A few minutes of review can save hours of debugging later.
+
+:::{.callout-tip}
+## Example Prompt
+"Before we deploy this, do a final review. Check for security issues, potential bugs, and anything that might cause problems in production."
+:::
+
+Make this part of your routine.
+
+## Summary
+
+Quality assurance with Claude Code means:
+
+1. Having it review its own code for bugs and improvements
+2. Checking specifically for security vulnerabilities
+3. Looking for opportunities to simplify
+4. Anticipating what could go wrong
+5. Adding tests for important functionality
+
+This extra effort produces a more reliable, secure application. In the next chapter, we'll take that application and deploy it so others can use it.

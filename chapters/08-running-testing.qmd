@@ -1,0 +1,202 @@
+# Running and Testing Your Project
+
+Code on its own doesn't do anything. You need to run it to see your application come to life. This chapter covers how to launch your project locally (on your own computer) and test that it works correctly.
+
+## Running Your Application Locally
+
+"Running locally" means your application is running on your computer, accessible only to you. This is how you develop and test before making it available to the world.
+
+:::{.callout-tip}
+## Example Prompt
+"How do I run this project locally? Start the development server."
+:::
+
+Claude Code will run the appropriate command for your tech stack. Common patterns include:
+
+- `npm run dev` for many JavaScript projects
+- `python manage.py runserver` for Django projects
+- `flutter run` for Flutter apps
+
+After the server starts, you'll usually see a message like:
+
+```
+Server running at http://localhost:3000
+```
+
+The number (3000 in this example) is the **port**---different applications use different ports.
+
+## Viewing Your Application
+
+### Web Applications
+
+Open your web browser and go to the URL shown in the Terminal (usually something like `http://localhost:3000`).
+
+You should see your application. It's running entirely on your computer---if you disconnect from the internet, it still works (mostly).
+
+**Hot reloading**: Many development setups automatically refresh the browser when you make changes. You'll see updates appear almost instantly without manually refreshing.
+
+### Mobile Applications
+
+Mobile apps are trickier because they need to run on a phone or tablet. You have a few options:
+
+**Simulators/Emulators**: These are fake phones that run on your computer.
+
+:::{.callout-tip}
+## Example Prompt
+"How do I run this app in the iOS simulator?"
+:::
+
+For iOS development, you'll need Xcode installed (free from the Mac App Store, but large). For Android, you'll need Android Studio.
+
+Claude Code can help you set these up, but be prepared---mobile development tooling is more complex than web.
+
+**Physical devices**: You can connect a real phone to your computer and run the app on it.
+
+:::{.callout-tip}
+## Example Prompt
+"How do I run this app on my actual iPhone that's connected to my computer?"
+:::
+
+This requires some setup, especially for iOS, but gives you the most accurate testing experience.
+
+**Expo Go** (for React Native): If your app uses Expo, you can scan a QR code with your phone to run the app without complicated setup.
+
+## Manual Testing
+
+Testing means checking that your application works correctly. Start with manual testing---using the app yourself and trying different scenarios.
+
+### What to Test
+
+Work through your features systematically:
+
+1. **Happy path**: The normal way users would use each feature
+   - Can I sign up with valid information?
+   - Can I create a post and see it appear?
+   - Can I complete a purchase?
+
+2. **Edge cases**: Unusual but valid scenarios
+   - What happens with a very long username?
+   - What if I submit an empty form?
+   - What if I click a button twice quickly?
+
+3. **Error cases**: Things that should fail gracefully
+   - Wrong password? (Should show an error, not crash)
+   - Network disconnected? (Should handle gracefully)
+   - Invalid data? (Should reject and explain why)
+
+### Documenting Bugs
+
+When you find something that doesn't work, be specific about what happened:
+
+:::{.callout-tip}
+## Example Prompt
+"Bug report: When I enter an email without the @ symbol and click Register, the page refreshes but nothing happens. Expected behavior: Show an error message explaining the email is invalid."
+:::
+
+Include:
+
+- What you did (steps to reproduce)
+- What you expected to happen
+- What actually happened
+- Any error messages you saw
+
+## Using Browser Developer Tools
+
+Your web browser has built-in tools that help with testing and debugging. In Chrome or Safari:
+
+- **Right-click** anywhere on your page and select **Inspect** (or press `Cmd + Option + I`)
+
+This opens a panel with several useful tabs:
+
+**Console**: Shows error messages and logs. If something isn't working, check here first. Red text indicates errors.
+
+**Network**: Shows all the data your app sends and receives. Useful for debugging communication issues.
+
+**Elements**: Shows the structure of your page. Useful for understanding layout issues.
+
+You don't need to become an expert in these tools. But when something goes wrong, checking the Console for red error messages is often illuminating.
+
+:::{.callout-tip}
+## Example Prompt
+"I see this error in the browser console: [paste error]. What does it mean?"
+:::
+
+## Responsive Testing
+
+Your web application should work on different screen sizes---phones, tablets, and desktops.
+
+In Chrome's developer tools, you can simulate different devices:
+
+1. Open developer tools (`Cmd + Option + I`)
+2. Click the device icon (two rectangles) in the top-left of the panel
+3. Select different device sizes from the dropdown
+
+Test your application at several sizes:
+
+- Phone (around 375px wide)
+- Tablet (around 768px wide)
+- Desktop (1200px+ wide)
+
+If something looks broken at a certain size:
+
+:::{.callout-tip}
+## Example Prompt
+"The navigation menu looks broken on mobile screens. The items overlap and some are cut off. Can you fix the responsive styling?"
+:::
+
+## When Things Don't Look Right
+
+Visual issues are common and usually easy to fix:
+
+:::{.callout-tip}
+## Example Prompt
+"The button is too close to the text above it. Add more space between them."
+:::
+
+:::{.callout-tip}
+## Example Prompt
+"The text is hard to read on the dark background. Make it lighter or change the background."
+:::
+
+:::{.callout-tip}
+## Example Prompt
+"This page feels cluttered. Can you add more whitespace and make the layout cleaner?"
+:::
+
+Don't hesitate to iterate on the design. It often takes several rounds to get things looking right.
+
+## Stopping the Server
+
+When you're done testing, you'll want to stop the development server:
+
+- Press `Ctrl + C` in the Terminal window where the server is running
+
+The server stops, and your application is no longer accessible at localhost.
+
+## Keeping Track of Issues
+
+As you test, you'll find things that need fixing. Keep a list:
+
+:::{.callout-tip}
+## Example Prompt
+"Let's make a list of issues I've found during testing:
+1. Login page doesn't show errors for wrong password
+2. Cart total doesn't update when removing items
+3. Profile page layout broken on mobile
+
+Can you fix these one at a time, starting with the first?"
+:::
+
+Work through issues systematically rather than jumping around randomly.
+
+## What You've Learned
+
+You now know how to:
+
+- Run your application locally
+- View it in a browser (or simulator for mobile)
+- Test features manually
+- Use browser developer tools to spot errors
+- Describe bugs clearly so Claude Code can fix them
+
+The more you test, the more solid your application becomes. In the next chapter, we'll cover having Claude Code review its own work for quality and security issues.

@@ -1,0 +1,57 @@
+# Preface {.unnumbered}
+
+You have an idea for an app. Maybe it's a tool that would make your work easier, a service that fills a gap in the market, or a passion project you've been dreaming about for years.
+
+In the past, turning that idea into reality meant one of three things: learn to code yourself (months or years of study), hire a development team (expensive and risky), or let the idea fade away.
+
+That's no longer true.
+
+AI tools like Claude Code have fundamentally changed what's possible for non-technical people. You can now describe what you want in plain English and watch as working code appears in front of you. You can build real, functional applications---web services, iOS apps, Android apps---without writing a single line of code yourself.
+
+This guide will show you how.
+
+## Who This Guide Is For
+
+This guide is for people who:
+
+- Have an idea for a web or mobile application
+- Have no coding experience (and don't want to become a programmer)
+- Own a Mac (the instructions are macOS-specific)
+- Are willing to learn a few new concepts and tools
+
+You don't need to understand programming languages, databases, or servers. You just need to be able to describe what you want clearly---a skill you already have.
+
+## What You'll Learn
+
+By the end of this guide, you'll know how to:
+
+- Use Claude Code to build and modify software projects
+- Have productive conversations with AI about technical decisions
+- Manage your code safely with version control
+- Run and test your application locally
+- Deploy your project so others can use it
+
+## What You Won't Learn
+
+This guide won't teach you to code. That's the point.
+
+You'll learn enough vocabulary to have informed conversations with AI, but you won't need to understand the code it writes. Think of yourself as a product owner directing a development team---you decide *what* to build; Claude Code figures out *how* to build it.
+
+## How to Use This Guide
+
+Read the chapters in order. Each one builds on the previous, taking you from initial setup through to a deployed application.
+
+When you see a boxed prompt like this:
+
+:::{.callout-tip}
+## Example Prompt
+"Help me verify that everything is installed correctly."
+:::
+
+That's an example of what you might say to Claude Code. Feel free to adapt these prompts to your specific situation---they're starting points, not scripts.
+
+Let's get started.
+
+---
+
+*This guide was written using Claude Code---the very tool it teaches you to use.*

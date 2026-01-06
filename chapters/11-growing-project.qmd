@@ -1,0 +1,208 @@
+# Growing Your Project
+
+Your application is live. Users can access it. Now what?
+
+Software is never truly "done." Users will have feedback, you'll have new ideas, bugs will surface, and the world around your app will change. This final chapter covers how to manage ongoing development.
+
+## The Rhythm of Iteration
+
+Building software is cyclical:
+
+1. **Identify** what needs to change (bug, feature, improvement)
+2. **Plan** how to address it
+3. **Implement** the change
+4. **Test** that it works
+5. **Deploy** to production
+6. **Repeat**
+
+You've already learned each of these steps. Now you'll repeat them, over and over, as your application evolves.
+
+## Handling User Feedback
+
+Once real people use your application, you'll learn things you couldn't have anticipated:
+
+- Features that seem obvious to you will confuse users
+- Things you thought were minor will turn out to matter a lot
+- Users will want things you never considered
+
+Collect feedback intentionally:
+
+- Add a way for users to contact you or report issues
+- Watch how people actually use the app (analytics, if appropriate)
+- Ask users directly what's working and what isn't
+
+Then prioritize ruthlessly. You can't do everything, so focus on what matters most.
+
+:::{.callout-tip}
+## Example Prompt
+"Users are reporting these issues: [list]. Help me prioritize them by impact and effort. What should I tackle first?"
+:::
+
+## Adding New Features
+
+When you're ready to add a feature:
+
+1. **Start a new session** with Claude Code
+2. **Orient it** to your current codebase
+3. **Describe the feature** you want to add
+4. **Implement, test, and deploy** as before
+
+:::{.callout-tip}
+## Example Prompt
+"I want to add a feature where users can export their data as a CSV file. Look at the current project and tell me what this would involve."
+:::
+
+Keep features focused. It's better to ship a simple version that works than to delay while building something elaborate.
+
+## Fixing Bugs in Production
+
+When something breaks after deployment:
+
+1. **Stay calm**---bugs happen to everyone
+2. **Understand the problem**---what exactly is broken?
+3. **Fix and test locally**---don't rush broken code to production
+4. **Deploy the fix**---then verify it's actually fixed
+
+:::{.callout-tip}
+## Example Prompt
+"Users are reporting that [describe problem]. Help me find and fix this bug."
+:::
+
+If something is seriously broken, you might need to roll back to a previous version. This is why version control matters:
+
+:::{.callout-tip}
+## Example Prompt
+"The last deployment broke something critical. How do I roll back to the previous version?"
+:::
+
+## Keeping Dependencies Updated
+
+Your project uses libraries and frameworks created by others. These get updated over time---bug fixes, security patches, new features.
+
+Periodically:
+
+:::{.callout-tip}
+## Example Prompt
+"Check if any of our dependencies have updates available. Are there any security updates we should apply?"
+:::
+
+Be cautious with major updates. Sometimes they require code changes. Claude Code can help navigate this:
+
+:::{.callout-tip}
+## Example Prompt
+"There's a new major version of [library]. What changed, and what would we need to update in our code?"
+:::
+
+## Backups Beyond Git
+
+Git protects your code, but your application likely has other important data:
+
+- **Environment variables**: The secrets and configuration that make your app work (API keys, database URLs). Keep a secure copy somewhere---if you lose these, your app won't run.
+- **Database backups**: User data lives in your database, not in Git. Most hosting platforms offer automatic backups, but make sure they're enabled.
+- **Uploaded files**: If users upload images or documents, these might not be in Git or your database.
+
+:::{.callout-tip}
+## Example Prompt
+"What data in this project isn't tracked by Git? How should I back it up?"
+:::
+
+Losing code is recoverable. Losing user data or production secrets is much worse. Take a few minutes to understand what needs backing up.
+
+## Scaling Considerations
+
+As your application grows, you might face scaling challenges:
+
+- **More users** means more server load
+- **More data** means database performance matters more
+- **More features** means more complexity to manage
+
+When you notice things slowing down:
+
+:::{.callout-tip}
+## Example Prompt
+"The application is getting slow as we've added more users. Can you analyze where the bottlenecks are and suggest improvements?"
+:::
+
+Most applications won't need to worry about scaling for a long time. Don't optimize prematurely---focus on making something people want first.
+
+## When to Get Human Help
+
+Claude Code is remarkably capable, but some situations benefit from human expertise:
+
+**Complex integrations**: Connecting to unusual systems or legacy software
+
+**Legal and compliance**: Privacy regulations, accessibility requirements, industry-specific rules
+
+**Performance emergencies**: When things are breaking under load and you need immediate expert help
+
+**Security incidents**: If you suspect your application has been compromised
+
+**Design and branding**: Making your application look professionally designed
+
+For these, consider:
+
+- Hiring a freelancer for specific tasks
+- Consulting with domain experts
+- Using professional services (legal, design, etc.)
+
+You can still use Claude Code to prepare---documenting what you have, listing questions, organizing information for a consultant.
+
+## Managing Scope
+
+One of the biggest risks to any project is scope creep---continuously adding features until the project becomes unmanageable.
+
+Signs you might be over-scoping:
+
+- The "must-have" list keeps growing
+- Features get started but not finished
+- The codebase feels increasingly messy
+- You're always working but never shipping
+
+To manage scope:
+
+- **Say no** to most feature requests (at least "not now")
+- **Finish what you start** before beginning new things
+- **Periodically simplify**---remove features that aren't being used
+- **Remember your core purpose**---what problem does this solve?
+
+:::{.callout-tip}
+## Example Prompt
+"We've added a lot of features. Help me audit what we have. What's being used? What might we consider removing or simplifying?"
+:::
+
+## Taking Breaks
+
+Software development is mentally demanding, even when AI is doing the coding. It's okay to:
+
+- Take breaks between features
+- Let the project rest while you gather feedback
+- Work on something else and come back later
+
+Your project will be there when you return. Claude Code doesn't forget, and your git history preserves everything.
+
+## Learning More
+
+You've come far, but there's always more to learn. If you want to go deeper:
+
+- **Ask Claude Code to explain** things you're curious about
+- **Read documentation** for tools you're using
+- **Follow blogs or communities** related to your tech stack
+- **Build more things**---experience is the best teacher
+
+You don't need to become a programmer. But understanding a bit more about how things work can help you make better decisions and communicate more effectively with AI (and humans).
+
+## You Did It
+
+Take a moment to appreciate what you've accomplished.
+
+You started with an idea and turned it into a real application that people can use. You learned to communicate with AI to make technical decisions. You navigated version control, deployment, and all the other complexities of modern software development.
+
+Not long ago, this would have required years of study or tens of thousands of dollars in development costs. Now it requires curiosity, persistence, and the ability to describe what you want clearly.
+
+The tools will keep improving. AI will get better at understanding intent and producing quality code. What won't change is the fundamental skill you've developed: the ability to think clearly about what you're building and communicate that effectively.
+
+Use this skill to build things that matter to you. Fix problems you care about. Create tools that help people.
+
+The technology is the means. What you do with it is up to you.
+
+Good luck.

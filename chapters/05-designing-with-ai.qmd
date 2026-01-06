@@ -1,0 +1,187 @@
+# Designing Your Project with AI
+
+This is where the real work begins. In this chapter, you'll learn how to collaborate with AI to transform your idea into a concrete plan that Claude Code can execute.
+
+The goal is to end up with a clear specification---a document that describes what you're building, who it's for, what technology you'll use, and what features it will have.
+
+## Start with Your Vision
+
+Before you open any AI tool, spend some time thinking about what you want to build. Don't worry about technical details---focus on the experience:
+
+- What problem does this solve?
+- Who will use it?
+- What will users be able to do?
+- What makes this different from existing solutions?
+
+Write these thoughts down in plain language. A few paragraphs is enough. This becomes your starting point for the AI conversation.
+
+## The Discovery Conversation
+
+Open Claude (either Claude Code or claude.ai) and start a conversation. Your goal is to explore and refine your idea.
+
+:::{.callout-tip}
+## Example Prompt
+"I want to build an app that helps small restaurants manage their reservations. Currently, most of them just use a paper book or take phone calls. I want something simple where customers can book online and restaurant owners can see and manage reservations. I'm thinking web app for the restaurant side and maybe a mobile-friendly website for customers. Can you help me think through what this would need?"
+:::
+
+Let the conversation develop naturally. AI is good at asking clarifying questions and pointing out things you might not have considered:
+
+- What happens when reservations conflict?
+- Do you need customer accounts, or anonymous booking?
+- How do restaurants configure their hours and table availability?
+- Should there be reminders or confirmations?
+
+Answer these questions thoughtfully. Each answer shapes your project.
+
+## Key Questions to Explore
+
+As you discuss your project, make sure you cover these areas:
+
+### Users and Use Cases
+
+- Who are your primary users?
+- What are the 3-5 main things they'll do?
+- Are there different types of users (e.g., customers vs. admins)?
+- What does a typical session look like?
+
+### Essential vs. Nice-to-Have Features
+
+This is critical. Your initial idea probably has more features than you can reasonably build at first. Work with AI to separate:
+
+**Essential (MVP)**: Features you absolutely need for the app to be useful
+
+**Nice-to-have**: Features that would be great but can come later
+
+**Future possibilities**: Features to keep in mind but not build now
+
+:::{.callout-tip}
+## Example Prompt
+"Based on what we've discussed, what would you say are the absolutely essential features for a first version? I want to launch something simple that works before adding more features."
+:::
+
+Being ruthless about scope is one of the most important things you can do. A simple app that exists is infinitely better than a complex app that never gets finished.
+
+### Technical Constraints
+
+Some factors will influence your technology choices:
+
+- Do you need to work offline?
+- How many users do you expect?
+- Is real-time functionality important (live updates, chat)?
+- Are there specific devices or browsers you need to support?
+- What's your budget for hosting and services?
+
+### Similar Products
+
+AI can help you understand how similar products work:
+
+:::{.callout-tip}
+## Example Prompt
+"What are some existing products that do something similar to what I'm describing? What can I learn from how they approach this problem?"
+:::
+
+You don't need to copy anyone, but understanding the landscape helps you make better decisions.
+
+## Choosing Your Tech Stack
+
+Once you understand what you're building, it's time to decide how to build it. This is where the vocabulary from the previous chapter comes in.
+
+:::{.callout-tip}
+## Example Prompt
+"Based on everything we've discussed, what technology stack would you recommend? I have no programming experience and will be using Claude Code to build this. Please explain your recommendations and any trade-offs I should consider."
+:::
+
+AI will suggest specific technologies and explain why. Ask follow-up questions:
+
+- "Why that database instead of alternatives?"
+- "What are the downsides of this approach?"
+- "Is this a common stack that's well-documented?"
+- "Will this choice make anything harder later?"
+
+You're not looking for the "best" technology (there isn't one). You're looking for a reasonable choice that fits your needs and that Claude Code can work with effectively.
+
+## Creating Your Specification Document
+
+Now it's time to capture everything in a document. This specification will guide Claude Code when you start building.
+
+:::{.callout-tip}
+## Example Prompt
+"Let's create a project specification document based on our conversation. Please include: the project overview, target users, core features for the MVP, chosen tech stack with brief justifications, and a rough structure of the main screens or pages."
+:::
+
+Review what AI produces. Ask for changes. Add things you thought of. The document doesn't need to be perfect, but it should be clear and complete enough that someone (or some AI) reading it would understand what to build.
+
+### What to Include
+
+A good specification typically covers:
+
+**Overview**: One paragraph describing what the app does and why
+
+**Users**: Who uses it and what they're trying to accomplish
+
+**Features**: Bulleted list of what users can do (prioritized)
+
+**Tech Stack**: What technologies you'll use and why
+
+**Pages/Screens**: A rough outline of the main interfaces
+
+**Data**: What information needs to be stored (users, posts, orders, etc.)
+
+**Authentication**: How users log in (if applicable)
+
+**Third-party services**: Any external services needed (payment processing, email, etc.)
+
+## A Note on Ambiguity
+
+Your specification doesn't need to answer every question. Some things will become clearer as you build. The goal is to have enough clarity to start, not to predict every detail.
+
+Leave room for things like:
+
+- Exact visual design and layout
+- Specific wording and copy
+- Edge cases you haven't thought of yet
+- Performance optimizations
+
+These can be figured out as you go.
+
+## Save Your Work
+
+Save your specification document somewhere you can refer back to it. The best approach is to save it as a file called `CLAUDE.md` in your project folder. Claude Code automatically reads this file at the start of each session, so it will always have your project context.
+
+:::{.callout-tip}
+## Example Prompt
+"Save our project specification as CLAUDE.md in the project root."
+:::
+
+Alternatively, you might:
+
+- Save it as a different file (like `README.md` or `SPEC.md`)
+- Keep the conversation transcript
+- Copy it into a notes app
+
+The `CLAUDE.md` approach is recommended because it means you don't have to re-explain your project each time you start a new session.
+
+## Switching Tools
+
+If you've been brainstorming in ChatGPT or claude.ai, now is the time to move to Claude Code. Claude Code works in your project folder and can create files and run commands.
+
+You can share your specification by:
+
+1. Copying and pasting it into Claude Code
+2. Saving it as a file and asking Claude Code to read it
+3. Starting fresh and giving Claude Code a summary
+
+:::{.callout-tip}
+## Example Prompt
+"I've been planning a project and I'd like to share the specification with you. Here's what I'm building: [paste specification]. Let me know if you have questions before we start."
+:::
+
+## What Comes Next
+
+You now have:
+
+- A clear understanding of what you're building
+- Decisions about technology
+- A specification document to guide development
+
+In the next chapter, we'll set up version control with GitHub---an essential safety net before you start making changes to code.

@@ -1,0 +1,266 @@
+# Building with Claude Code
+
+This is where theory becomes reality. You've planned your project, set up version control, and now it's time to build. This chapter covers how to work effectively with Claude Code to turn your specification into working software.
+
+## Starting a Session
+
+Navigate to your project folder and start Claude Code:
+
+```bash
+cd ~/Projects/my-app
+claude
+```
+
+Claude Code remembers the context of your conversation within a session, so it's helpful to start by orienting it to your project.
+
+:::{.callout-tip}
+## Example Prompt
+"I'm building [brief description]. Here's my specification: [paste or summarize key points]. Let's start by setting up the project structure."
+:::
+
+If you've worked on this project before, you might instead say:
+
+:::{.callout-tip}
+## Example Prompt
+"I'm continuing work on [project name]. Can you look at what we have so far and remind yourself of the project structure?"
+:::
+
+Claude Code can read your existing files to understand what's already been built.
+
+## Creating the Project Structure
+
+Every project starts with structure---the folders and initial files that organize your code.
+
+:::{.callout-tip}
+## Example Prompt
+"Based on our specification, create the initial project structure. Set up the folders, configuration files, and any boilerplate code we'll need."
+:::
+
+Claude Code will:
+
+1. Create the necessary folders
+2. Set up configuration files (like `package.json` for Node.js projects)
+3. Install dependencies (libraries your project uses)
+4. Create starter files for each part of your application
+
+Watch what it creates. Ask questions if you're curious about why something is structured a certain way. Understanding the "why" isn't required, but it helps you make better decisions later.
+
+## Building Feature by Feature
+
+Don't try to build everything at once. Work on one feature at a time, get it working, commit, and then move on.
+
+### Example Workflow
+
+Let's say your app needs user registration. Here's how that might go:
+
+**1. Ask for the feature:**
+
+:::{.callout-tip}
+## Example Prompt
+"Let's add user registration. Users should be able to sign up with an email and password. We need a registration page, a way to store user accounts, and basic validation."
+:::
+
+**2. Claude Code implements it**, creating or modifying several files.
+
+**3. Test it** (we'll cover testing in the next chapter).
+
+**4. Provide feedback:**
+
+:::{.callout-tip}
+## Example Prompt
+"This works, but I'd like the password requirements to be stronger. Require at least 8 characters with a number and special character."
+:::
+
+**5. Commit when satisfied:**
+
+:::{.callout-tip}
+## Example Prompt
+"This looks good. Please commit these changes."
+:::
+
+**6. Move to the next feature.**
+
+This cycle---request, implement, test, refine, commit---is the rhythm of development.
+
+## Effective Prompting Strategies
+
+How you communicate with Claude Code affects what you get. Here are strategies that work well:
+
+### Be Specific About What You Want
+
+Vague requests get vague results. Compare:
+
+❌ "Add a form to the page"
+
+✅ "Add a contact form to the homepage with fields for name, email, and message. When submitted, it should send an email to admin@mysite.com and show a success message."
+
+The more detail you provide, the closer Claude Code gets to what you have in mind on the first try.
+
+### Describe the User Experience
+
+Instead of describing technical implementation, describe what users should experience:
+
+:::{.callout-tip}
+## Example Prompt
+"When a user clicks the 'Add to Cart' button, the item should appear in their cart with a small animation. The cart icon in the header should update to show the number of items. If they try to add more than 10 of the same item, show an error message."
+:::
+
+This tells Claude Code not just what to build, but how it should feel.
+
+### Ask for Explanations
+
+Don't be shy about asking Claude Code to explain its choices:
+
+:::{.callout-tip}
+## Example Prompt
+"You created a file called middleware.js. What does this do and why do we need it?"
+:::
+
+Understanding builds over time. You don't need to learn everything, but asking occasional questions helps you develop intuition.
+
+### Break Complex Features Down
+
+If a feature feels big, ask Claude Code to help break it down:
+
+:::{.callout-tip}
+## Example Prompt
+"I want to add a payment system so users can buy things. This feels complex. Can you break this down into smaller steps we can implement one at a time?"
+:::
+
+Smaller steps are easier to build, test, and debug.
+
+## Using Plan Mode
+
+Plan mode is one of Claude Code's most powerful features. Instead of immediately writing code, Claude Code stops to think, research your codebase, and design an approach first.
+
+To enter plan mode, start your message with `/plan`:
+
+:::{.callout-tip}
+## Example Prompt
+"/plan I want to add a notification system where users can receive email and in-app notifications for various events. Please design how this would work before implementing anything."
+:::
+
+In plan mode, Claude Code will:
+
+1. Research your existing codebase to understand what's already there
+2. Consider different approaches and their trade-offs
+3. Write a detailed plan describing what it intends to do
+4. Wait for your approval before making any changes
+
+You can then review the plan and:
+
+- **Approve it** to let Claude Code proceed with implementation
+- **Ask questions** about parts you don't understand
+- **Request changes** if you want a different approach
+- **Reject it** and ask for alternatives
+
+:::{.callout-tip}
+## Example Prompt
+"Why did you choose that approach instead of [alternative]? What are the trade-offs?"
+:::
+
+### When to Use Plan Mode
+
+Plan mode is especially valuable when:
+
+- **The feature is complex**---multiple files, new concepts, or significant changes
+- **You're unsure about the approach**---you want to understand before committing
+- **You want to learn**---seeing the plan helps you understand how things work
+- **The stakes are high**---changes that would be hard to undo
+
+For simple changes ("make this button blue"), plan mode is overkill. But for anything substantial, it's worth taking the time to review the plan first.
+
+## When Things Don't Work
+
+Things will break. That's normal. Here's how to handle it:
+
+### Describe What's Happening
+
+:::{.callout-tip}
+## Example Prompt
+"When I click the submit button, nothing happens. The page should show a success message but it stays the same."
+:::
+
+:::{.callout-tip}
+## Example Prompt
+"I'm getting an error that says [exact error message]. What does this mean and how do I fix it?"
+:::
+
+Be specific about what you expected vs. what actually happened.
+
+### Share Error Messages
+
+Error messages are clues. When you see an error, copy the entire thing:
+
+:::{.callout-tip}
+## Example Prompt
+"I see this error in the Terminal:
+
+[paste full error message]
+
+What's causing this?"
+:::
+
+Claude Code can usually diagnose problems from error messages.
+
+### Ask for Debugging Help
+
+:::{.callout-tip}
+## Example Prompt
+"The feature we just built isn't working correctly. Can you add some debugging to help us figure out what's going wrong?"
+:::
+
+Sometimes finding the problem requires investigation. Claude Code can add temporary code to help trace what's happening.
+
+## Iterating on Design
+
+You don't need to know exactly what you want from the start. It's often easier to see something and react to it.
+
+:::{.callout-tip}
+## Example Prompt
+"This works, but the layout feels cluttered. Can you simplify it? Maybe fewer elements on screen at once."
+:::
+
+:::{.callout-tip}
+## Example Prompt
+"I'd like the color scheme to be more professional. Think blues and grays instead of the bright colors."
+:::
+
+Describe the direction you want, and Claude Code will adjust.
+
+## Managing Your Session
+
+A few practical tips:
+
+**Long sessions**: Claude Code maintains context throughout a session, but very long sessions can sometimes cause confusion. You have a few options:
+
+Use `/compact` to summarize the conversation so far, reducing clutter while keeping important context:
+
+:::{.callout-tip}
+## Example Prompt
+"/compact"
+:::
+
+Or start completely fresh if things get too messy:
+
+:::{.callout-tip}
+## Example Prompt
+"/clear Let's start fresh. Read the project files and give me a summary of where we are."
+:::
+
+**Taking breaks**: You can quit Claude Code (`/exit` or `Ctrl+C`) and come back later. Next time, Claude Code will read your files to understand the project state.
+
+**Multiple features at once**: Generally, focus on one thing at a time. Finish one feature before starting another.
+
+## What Success Looks Like
+
+By the end of a building session, you should have:
+
+- New code that implements your requested feature
+- A working (if rough) version you can test
+- Commits that checkpoint your progress
+- An understanding of what was built and why
+
+The code doesn't need to be perfect---you'll refine it later. The goal is forward progress.
+
+In the next chapter, we'll cover how to run your application and test that everything works as expected.

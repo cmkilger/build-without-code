@@ -1,0 +1,209 @@
+# Version Control with GitHub
+
+Before you write any code, let's set up a safety net. Version control tracks every change to your project, letting you undo mistakes and see the history of how things evolved.
+
+Think of it as an unlimited undo button---not just for the last thing you did, but for everything, forever.
+
+## Why Version Control Matters
+
+When building software, things go wrong. A lot. You might:
+
+- Make changes that break something that was working
+- Want to try an experiment without losing your current progress
+- Need to see what your code looked like last week
+- Accidentally delete something important
+
+Version control solves all of these problems. Every time you save a checkpoint (called a "commit"), you can return to that exact state later.
+
+Even if you're the only person working on your project, version control is essential.
+
+## Git and GitHub
+
+**Git** is the version control system---the tool that tracks changes. It runs on your computer.
+
+**GitHub** is a website that stores a copy of your project online. It serves as:
+
+- A backup (if your computer dies, your code is safe)
+- A way to collaborate with others (if you ever need to)
+- A requirement for many deployment platforms
+
+Git is the tool. GitHub is the service. They work together, but they're different things.
+
+## Creating a GitHub Account
+
+If you don't have a GitHub account:
+
+1. Go to [github.com](https://github.com)
+2. Click "Sign up"
+3. Follow the prompts to create a free account
+4. Verify your email address
+
+That's it. The free tier is more than enough for personal projects.
+
+## Setting Up Git
+
+Git usually comes pre-installed on Mac. Let's verify and configure it.
+
+:::{.callout-tip}
+## Example Prompt
+"Help me check if Git is installed and configure it with my name and email for commits."
+:::
+
+Claude Code will run the necessary commands. You'll need to provide:
+
+- Your name (used to label your commits)
+- Your email (should match your GitHub account email)
+
+## Initializing Your Project
+
+Navigate to your project folder in Terminal:
+
+```bash
+cd ~/Projects/my-app
+```
+
+Then start Claude Code:
+
+```bash
+claude
+```
+
+Now ask Claude Code to set up version control:
+
+:::{.callout-tip}
+## Example Prompt
+"Initialize a Git repository for this project and create a .gitignore file appropriate for [your tech stack, e.g., a Node.js project]."
+:::
+
+Claude Code will:
+
+1. Run `git init` to create a repository
+2. Create a `.gitignore` file (which tells Git what files to ignore, like temporary files and secrets)
+
+### A Critical Note About Secrets
+
+Your application will likely have secrets---API keys, database passwords, and other sensitive information. These should **never** be committed to Git. Once something is in your Git history, it's very hard to remove, and if your repository is public (or ever becomes public), those secrets are exposed.
+
+Instead, secrets go in a `.env` file, which should be listed in `.gitignore` so Git ignores it. Claude Code knows to do this, but it's worth double-checking:
+
+:::{.callout-tip}
+## Example Prompt
+"Make sure our .gitignore properly excludes sensitive files like .env, API keys, and any credentials."
+:::
+
+If Claude Code ever writes a secret directly into code (like an API key in a configuration file), ask it to move that to an environment variable instead.
+
+## Connecting to GitHub
+
+Now let's connect your local repository to GitHub:
+
+:::{.callout-tip}
+## Example Prompt
+"Help me create a new repository on GitHub and connect this local project to it."
+:::
+
+This usually involves:
+
+1. Creating a new repository on GitHub (Claude Code will guide you through this)
+2. Running commands to connect your local repository to the GitHub one
+3. Pushing your initial code to GitHub
+
+You may need to authenticate with GitHub. Claude Code will help you through this process, which might involve creating a personal access token or using SSH keys.
+
+## Understanding the Basics
+
+You don't need to be a Git expert, but these concepts are worth understanding:
+
+### Repository (Repo)
+
+A repository is your project folder with version control enabled. It contains all your files plus the hidden `.git` folder that tracks history.
+
+### Commit
+
+A commit is a snapshot of your project at a specific moment. Each commit has:
+
+- A unique identifier
+- A message describing what changed
+- A record of which files were modified
+
+Think of commits as save points in a video game. You want to make them frequently---after each meaningful change.
+
+### Push
+
+Pushing sends your local commits to GitHub. Until you push, your changes only exist on your computer.
+
+### Pull
+
+Pulling downloads changes from GitHub to your computer. You'll use this if you work on multiple computers or if you make changes directly on GitHub.
+
+### Branch
+
+Branches let you work on different versions of your project simultaneously. The main branch (usually called "main") is your primary version. You might create other branches to experiment without affecting the main version.
+
+For now, you'll mostly work on the main branch.
+
+## Working with Claude Code
+
+Claude Code understands Git and will help you manage version control throughout development.
+
+:::{.callout-tip}
+## Example Prompt
+"I've made some changes. Please commit them with an appropriate message and push to GitHub."
+:::
+
+:::{.callout-tip}
+## Example Prompt
+"What changes have I made since the last commit?"
+:::
+
+:::{.callout-tip}
+## Example Prompt
+"I think I broke something. Can you show me what changed in the last few commits so I can figure out what went wrong?"
+:::
+
+Claude Code will run the necessary Git commands and explain what's happening.
+
+## Committing Regularly
+
+Get in the habit of committing after each meaningful change:
+
+- Added a new feature? Commit.
+- Fixed a bug? Commit.
+- Reorganized some code? Commit.
+
+More commits means more checkpoints to return to if something goes wrong.
+
+A good commit message briefly describes what changed:
+
+- "Add user registration page"
+- "Fix bug where login button didn't work"
+- "Update homepage styling"
+
+Claude Code will write these messages for you, but it helps to be specific about what you've accomplished when you ask for a commit.
+
+## Recovering from Mistakes
+
+One of version control's biggest benefits is the ability to undo mistakes.
+
+:::{.callout-tip}
+## Example Prompt
+"Something is broken and I don't know what I changed. Can you help me revert to the last working commit?"
+:::
+
+:::{.callout-tip}
+## Example Prompt
+"I want to undo the last commit but keep working on the changes."
+:::
+
+Claude Code can help you navigate these situations. Don't be afraid to experiment---that's what version control is for.
+
+## What You've Accomplished
+
+You now have:
+
+- A Git repository tracking your project
+- A GitHub account with your project backed up online
+- The ability to commit changes and recover from mistakes
+- Claude Code as your guide for version control operations
+
+With this safety net in place, you're ready to start building. In the next chapter, we'll create the actual structure of your application.
