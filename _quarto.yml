@@ -26,6 +26,7 @@ format:
     theme:
       light: cosmo
       dark: darkly
+    respect-user-color-scheme: true
     toc: true
     toc-depth: 2
   pdf:
