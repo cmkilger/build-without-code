@@ -24,8 +24,8 @@ book:
 format:
   html:
     theme:
-      light: cosmo
-      dark: darkly
+      light: [cosmo, styles.scss]
+      dark: [darkly, styles.scss]
     respect-user-color-scheme: true
     toc: true
     toc-depth: 2
