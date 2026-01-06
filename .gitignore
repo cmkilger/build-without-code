@@ -3,3 +3,13 @@
 **/*.quarto_ipynb
 .claude/settings.local.json
 .DS_Store
+
+# LaTeX intermediates
+*.tex
+*.aux
+*.log
+*.out
+*.toc
+*.fls
+*.fdb_latexmk
+*.synctex.gz
