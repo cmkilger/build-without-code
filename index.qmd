@@ -6,9 +6,9 @@ In the past, turning that idea into reality meant one of three things: learn to 
 
 That's no longer true.
 
-AI tools like Claude Code have fundamentally changed what's possible for non-technical people. You can now describe what you want in plain English and watch as working code appears in front of you. You can build real, functional applications---web services, iOS apps, Android apps---without writing a single line of code yourself.
+AI coding assistants---Claude Code, GitHub Copilot CLI, OpenAI Codex, and others---have fundamentally changed what's possible for non-technical people. You can now describe what you want in plain English and watch as working code appears in front of you. You can build real, functional applications---web services, iOS apps, Android apps---without writing a single line of code yourself.
 
-This guide will show you how.
+This guide uses Claude Code, which we believe offers the best experience for this kind of work. But if you already have a ChatGPT Plus or GitHub Copilot subscription, you may already have access to similar tools---OpenAI Codex and GitHub Copilot CLI, respectively. They're capable alternatives worth exploring if you'd rather not pay for another service. Most of the principles in this guide apply regardless of which assistant you choose.
 
 ## Who This Guide Is For
 
