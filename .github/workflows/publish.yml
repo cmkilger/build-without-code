@@ -28,6 +28,8 @@ jobs:
 
       - name: Render Book
         run: quarto render
+        env:
+          TZ: America/Denver
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
