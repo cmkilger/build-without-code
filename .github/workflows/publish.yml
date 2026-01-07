@@ -23,9 +23,11 @@ jobs:
 
       - name: Setup Quarto
         uses: quarto-dev/quarto-actions/setup@v2
+        with:
+          tinytex: true
 
       - name: Render Book
-        run: quarto render --to html
+        run: quarto render
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3

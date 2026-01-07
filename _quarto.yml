@@ -7,7 +7,7 @@ book:
   subtitle: "A Non-Technical Guide to Creating Apps with AI"
   author: "Cory Kilger"
   date: today
-  downloads: [pdf]
+  downloads: [pdf, epub]
   chapters:
     - index.qmd
     - chapters/01-introduction.qmd
@@ -35,3 +35,6 @@ format:
     toc: true
     toc-depth: 2
     colorlinks: true
+  epub:
+    toc: true
+    toc-depth: 2
