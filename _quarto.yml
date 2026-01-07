@@ -38,3 +38,4 @@ format:
   epub:
     toc: true
     toc-depth: 2
+    cover-image: cover.jpg
