@@ -16,7 +16,7 @@ This guide is for people who:
 
 - Have an idea for a web or mobile application
 - Have no coding experience (and don't want to become a programmer)
-- Own a Mac (the instructions are macOS-specific)
+- Have a computer (examples use macOS, but concepts apply to any platform)
 - Are willing to learn a few new concepts and tools
 
 You don't need to understand programming languages, databases, or servers. You just need to be able to describe what you want clearly---a skill you already have.

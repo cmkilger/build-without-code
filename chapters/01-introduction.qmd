@@ -32,8 +32,8 @@ Your job isn't to know *how* to build software. Your job is to know *what* you w
 
 To follow this guide, you'll need:
 
-**A Mac computer**
-: The instructions in this guide are written for macOS. The concepts apply to other operating systems, but the specific commands may differ.
+**A computer**
+: The examples use macOS, but the concepts apply to Windows and Linux. Claude Code can help you adapt commands for your platform.
 
 **An internet connection**
 : Claude Code requires an internet connection to work.
