@@ -94,6 +94,21 @@ claude
 
 The first time you run Claude Code, it will ask you to authenticate. This connects Claude Code to your Anthropic account.
 
+:::{.callout-note}
+## Choosing a Plan
+When you create your Anthropic account, you'll choose a subscription tier. Each tier has rate limits---caps on how much you can use Claude Code in a given time window.
+
+**Free** works for light exploration, but you'll likely hit limits quickly during active development.
+
+**Pro ($20/month)** is enough for most founders building their first project. You get roughly 45 messages every 5 hours before limits kick in.
+
+**Max plans** ($100-200/month) offer more capacity for heavier usage or larger projects.
+
+If you hit a rate limit, Claude Code will pause until the window resets (every 5 hours). Your work isn't lost---you just wait or upgrade.
+
+For current pricing details, visit [claude.ai/pricing](https://claude.ai/pricing).
+:::
+
 Follow the prompts:
 
 1. Claude Code will open a browser window (or give you a URL to open)
