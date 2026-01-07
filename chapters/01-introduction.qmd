@@ -75,7 +75,7 @@ This guide will take you from zero to a working, deployed application. Getting f
 
 This guide focuses on Claude Code because it's exceptionally good at writing and modifying code. However, it's worth knowing that other AI tools can be valuable complements:
 
-**ChatGPT** and similar conversational AI tools are often better for high-level brainstorming, exploring ideas, and having extended conversations about your project vision. When you're trying to figure out *what* to build, these tools can be helpful thinking partners.
+**ChatGPT, claude.ai,** and similar conversational AI tools are often better for high-level brainstorming, exploring ideas, and having extended conversations about your project vision. When you're trying to figure out *what* to build, these tools can be helpful thinking partners.
 
 **Claude Code** excels when you know what you want and need it built. It's a command-line tool that runs in Terminal---not a desktop app with buttons and menus, but a text-based interface where you type messages and Claude Code responds. It can read and write files, run commands, and iterate on actual code. When you're ready to *make* something, Claude Code is your tool.
 
