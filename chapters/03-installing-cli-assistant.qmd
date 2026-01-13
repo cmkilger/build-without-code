@@ -4,7 +4,7 @@ Before we can start building, we need to install the CLI you chose: Claude Code,
 
 ## Step 1: Confirm Your Choice
 
-If you haven't picked a tool yet, decide now. We'll use your choice throughout the book.
+You should have picked a tool in the preface. As a reminder:
 
 - **Claude Code** if you want a purpose-built coding CLI and already use Claude.
 - **Codex CLI** if you already have OpenAI access to Codex.
@@ -15,55 +15,17 @@ If you haven't picked a tool yet, decide now. We'll use your choice throughout t
 Each tool offers free and paid tiers. Free tiers work for light exploration, but you'll likely hit usage limits during active development. Expect to use a paid subscription ($20-30/month) for serious project work. If you hit a rate limit, your CLI will pause until the limit resets—your work isn't lost, you just wait.
 :::
 
-## Step 2: Install
+## Step 2: Install Homebrew
 
-### Claude Code
-
-Homebrew (recommended):
+Homebrew is a package manager for macOS that makes installing and updating tools easy. Paste this into Terminal:
 
 ```bash
-brew install --cask claude-code
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
-Launch it:
+Follow the prompts. When it finishes, it may tell you to run a couple of commands to add Homebrew to your path—copy and run those if prompted.
 
-```bash
-claude
-```
-
-### OpenAI Codex CLI
-
-Homebrew (recommended):
-
-```bash
-brew install --cask codex
-```
-
-Launch it:
-
-```bash
-codex
-```
-
-### GitHub Copilot CLI
-
-Homebrew (recommended):
-
-```bash
-brew install --cask copilot-cli
-```
-
-Launch it:
-
-```bash
-copilot
-```
-
-Then authenticate:
-
-```
-/login
-```
+For the latest instructions, visit [brew.sh](https://brew.sh).
 
 :::{.callout-note}
 If you can't use Homebrew, see the official docs for alternative install options:
@@ -73,9 +35,37 @@ If you can't use Homebrew, see the official docs for alternative install options
 - Copilot CLI: <https://docs.github.com/en/copilot/how-tos/set-up/install-copilot-cli>
 :::
 
-## Step 3: First Launch and Sanity Check
+## Step 3: Install Your CLI
 
-Run your CLI in a project folder and make sure it responds to a simple prompt. On first launch, you'll be prompted to log in (or run `/login`) for your chosen tool.
+Run the install command for your chosen tool:
+
+### Claude Code
+
+```bash
+brew install --cask claude-code
+```
+
+### OpenAI Codex CLI
+
+```bash
+brew install --cask codex
+```
+
+### GitHub Copilot CLI
+
+```bash
+brew install --cask copilot-cli
+```
+
+## Step 4: First Launch
+
+Navigate to your project folder (from Chapter 2) and launch your CLI:
+
+- Claude Code: `claude`
+- Codex CLI: `codex`
+- Copilot CLI: `copilot`
+
+On first launch, you'll need to authenticate. Claude Code and Codex CLI will open a browser automatically. For Copilot CLI, type `/login` when prompted.
 
 :::{.callout-tip}
 ## Example Prompt
@@ -84,32 +74,29 @@ Run your CLI in a project folder and make sure it responds to a simple prompt. O
 
 If the tool can run a basic command and explain the result, you're ready to continue.
 
-## Understanding the Interface
+## Step 5: Learn the Basics
 
 Each CLI has its own interactive workflow. Here are the basics you'll use most often.
 
 ### Claude Code
 
-- Start an interactive session with `claude`.
-- Use `/help` to list available commands.
-- Type `/clear` to clear the current conversation.
-- Press `Esc` to cancel a response mid-generation.
-- Type `/exit` or press `Ctrl+C` to quit.
-- Use `/resume` to continue a previous session where you left off.
+- `/help` to list available commands
+- `/clear` to clear the current conversation
+- `Esc` to cancel a response mid-generation
+- `/exit` or `Ctrl+C` to quit
+- `/resume` to continue a previous session
 
 ### OpenAI Codex CLI
 
-- Start the full-screen interactive UI with `codex`.
-- Type `/approvals` to change approval modes.
-- Type `/status` to see the current model and approval settings.
-- Type `/diff` to review changes before you commit.
-- Type `/exit` or press `Ctrl+C` to quit.
+- `/approvals` to change approval modes
+- `/status` to see the current model and settings
+- `/diff` to review changes before you commit
+- `/exit` or `Ctrl+C` to quit
 
 ### GitHub Copilot CLI
 
-- Start the interactive session with `copilot`.
-- If you're not logged in, run `/login` to authenticate.
-- Type `?` in the prompt or run `copilot help` to see commands and options.
+- `/login` to authenticate (if needed)
+- `?` or `copilot help` to see commands and options
 
 ## Next Steps
 
