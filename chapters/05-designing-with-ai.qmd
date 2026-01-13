@@ -1,6 +1,6 @@
 # Designing Your Project with AI
 
-This is where the real work begins. In this chapter, you'll learn how to collaborate with AI to transform your idea into a concrete plan that Claude Code can execute.
+This is where the real work begins. In this chapter, you'll learn how to collaborate with AI to transform your idea into a concrete plan that your CLI assistant can execute.
 
 The goal is to end up with a clear specification---a document that describes what you're building, who it's for, what technology you'll use, and what features it will have.
 
@@ -88,7 +88,7 @@ Once you understand what you're building, it's time to decide how to build it. T
 
 :::{.callout-tip}
 ## Example Prompt
-"Based on everything we've discussed, what technology stack would you recommend? I have no programming experience and will be using Claude Code to build this. Please explain your recommendations and any trade-offs I should consider."
+"Based on everything we've discussed, what technology stack would you recommend? I have no programming experience and will be using a CLI assistant to build this. Please explain your recommendations and any trade-offs I should consider."
 :::
 
 AI will suggest specific technologies and explain why. Ask follow-up questions:
@@ -98,11 +98,11 @@ AI will suggest specific technologies and explain why. Ask follow-up questions:
 - "Is this a common stack that's well-documented?"
 - "Will this choice make anything harder later?"
 
-You're not looking for the "best" technology (there isn't one). You're looking for a reasonable choice that fits your needs and that Claude Code can work with effectively.
+You're not looking for the "best" technology (there isn't one). You're looking for a reasonable choice that fits your needs and that your CLI assistant can work with effectively.
 
 ## Creating Your Specification Document
 
-Now it's time to capture everything in a document. This specification will guide Claude Code when you start building.
+Now it's time to capture everything in a document. This specification will guide your CLI assistant when you start building.
 
 :::{.callout-tip}
 ## Example Prompt
@@ -146,7 +146,7 @@ These can be figured out as you go.
 
 ## Save Your Work
 
-Save your specification document somewhere you can refer back to it. The best approach is to save it as a file called `CLAUDE.md` in your project folder. Claude Code automatically reads this file at the start of each session, so it will always have your project context.
+Save your specification document somewhere you can refer back to it. Many CLI assistants automatically read a project context file at the start of each session. For Claude Code, this is `CLAUDE.md`; for others, check the documentation. Saving your specification in the appropriate file means your assistant will always have your project context.
 
 :::{.callout-tip}
 ## Example Prompt
@@ -163,13 +163,13 @@ The `CLAUDE.md` approach is recommended because it means you don't have to re-ex
 
 ## Switching Tools
 
-If you've been brainstorming in ChatGPT or claude.ai, now is the time to move to Claude Code. Claude Code works in your project folder and can create files and run commands.
+If you've been brainstorming in ChatGPT or claude.ai, now is the time to move to your CLI assistant. It works in your project folder and can create files and run commands.
 
 You can share your specification by:
 
-1. Copying and pasting it into Claude Code
-2. Saving it as a file and asking Claude Code to read it
-3. Starting fresh and giving Claude Code a summary
+1. Copying and pasting it into your CLI assistant
+2. Saving it as a file and asking your assistant to read it
+3. Starting fresh and giving your assistant a summary
 
 :::{.callout-tip}
 ## Example Prompt

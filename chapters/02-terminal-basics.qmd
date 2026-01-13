@@ -1,6 +1,6 @@
 # Getting Started with the Terminal
 
-The Terminal might look intimidating---a blank screen with a blinking cursor, waiting for commands. But you only need to know a handful of things to work effectively with Claude Code.
+The Terminal might look intimidating---a blank screen with a blinking cursor, waiting for commands. But you only need to know a handful of things to work effectively with your CLI assistant.
 
 Think of the Terminal as a text-based way to navigate your computer and run programs. Instead of clicking on folders and files, you type commands. That's really all it is.
 
@@ -151,7 +151,7 @@ pwd
 /Users/yourname/Projects/my-app
 ```
 
-You're now in your project folder. This is where Claude Code will work.
+You're now in your project folder. This is where your CLI assistant will work.
 
 ## A Note on Spaces in Names
 
@@ -164,17 +164,17 @@ Spaces in names require special handling in the Terminal and can cause headaches
 
 ## That's It (For Now)
 
-Those five things (`pwd`, `ls`, `cd`, `mkdir`, and arrow keys) are all the Terminal knowledge you need to get started. Claude Code handles everything else.
+Those five things (`pwd`, `ls`, `cd`, `mkdir`, and arrow keys) are all the Terminal knowledge you need to get started. Your CLI assistant handles everything else.
 
 In the next chapter, we'll give you a few commands to copy and paste for installing tools. You don't need to understand exactly how they work---just run them and move on.
 
-Depending on your project, you may encounter other commands later---tools for running servers, managing databases, or working with specific technologies. Don't worry about learning these upfront. Claude Code will introduce them as needed and explain what they do.
+Depending on your project, you may encounter other commands later---tools for running servers, managing databases, or working with specific technologies. Don't worry about learning these upfront. Your CLI assistant will introduce them as needed and explain what they do.
 
 :::{.callout-tip}
 ## Example Prompt
 "I'm in my project folder. What do I do next?"
 :::
 
-When you get stuck or confused in the Terminal, you can always ask Claude Code for help. It can explain what's happening and guide you through any Terminal-related task.
+When you get stuck or confused in the Terminal, you can always ask your CLI assistant for help. It can explain what's happening and guide you through any Terminal-related task.
 
-In the next chapter, we'll install Claude Code itself.
+In the next chapter, we'll install your CLI assistant.

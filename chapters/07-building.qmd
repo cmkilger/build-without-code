@@ -1,17 +1,12 @@
-# Building with Claude Code
+# Building with Your CLI Assistant
 
-This is where theory becomes reality. You've planned your project, set up version control, and now it's time to build. This chapter covers how to work effectively with Claude Code to turn your specification into working software.
+This is where theory becomes reality. You've planned your project, set up version control, and now it's time to build. This chapter covers how to work effectively with your CLI assistant to turn your specification into working software.
 
 ## Starting a Session
 
-Navigate to your project folder and start Claude Code:
+Navigate to your project folder and start your CLI assistant (see Chapter 3 for the command for your chosen tool).
 
-```bash
-cd ~/Projects/my-app
-claude
-```
-
-Claude Code remembers the context of your conversation within a session, so it's helpful to start by orienting it to your project.
+Your CLI assistant remembers the context of your conversation within a session, so it's helpful to start by orienting it to your project.
 
 :::{.callout-tip}
 ## Example Prompt
@@ -25,7 +20,7 @@ If you've worked on this project before, you might instead say:
 "I'm continuing work on [project name]. Can you look at what we have so far and remind yourself of the project structure?"
 :::
 
-Claude Code can read your existing files to understand what's already been built.
+Your CLI assistant can read your existing files to understand what's already been built.
 
 ## Creating the Project Structure
 
@@ -36,7 +31,7 @@ Every project starts with structure---the folders and initial files that organiz
 "Based on our specification, create the initial project structure. Set up the folders, configuration files, and any boilerplate code we'll need."
 :::
 
-Claude Code will:
+Your CLI assistant will:
 
 1. Create the necessary folders
 2. Set up configuration files (like `package.json` for Node.js projects)
@@ -60,7 +55,7 @@ Let's say your app needs user registration. Here's how that might go:
 "Let's add user registration. Users should be able to sign up with an email and password. We need a registration page, a way to store user accounts, and basic validation."
 :::
 
-**2. Claude Code implements it**, creating or modifying several files.
+**2. Your CLI assistant implements it**, creating or modifying several files.
 
 **3. Test it** (we'll cover testing in the next chapter).
 
@@ -84,7 +79,7 @@ This cycle---request, implement, test, refine, commit---is the rhythm of develop
 
 ## Effective Prompting Strategies
 
-How you communicate with Claude Code affects what you get. Here are strategies that work well:
+How you communicate with your CLI assistant affects what you get. Here are strategies that work well:
 
 ### Be Specific About What You Want
 
@@ -94,7 +89,7 @@ Vague requests get vague results. Compare:
 
 ✅ "Add a contact form to the homepage with fields for name, email, and message. When submitted, it should send an email to admin@mysite.com and show a success message."
 
-The more detail you provide, the closer Claude Code gets to what you have in mind on the first try.
+The more detail you provide, the closer your CLI assistant gets to what you have in mind on the first try.
 
 ### Describe the User Experience
 
@@ -105,11 +100,11 @@ Instead of describing technical implementation, describe what users should exper
 "When a user clicks the 'Add to Cart' button, the item should appear in their cart with a small animation. The cart icon in the header should update to show the number of items. If they try to add more than 10 of the same item, show an error message."
 :::
 
-This tells Claude Code not just what to build, but how it should feel.
+This tells your CLI assistant not just what to build, but how it should feel.
 
 ### Ask for Explanations
 
-Don't be shy about asking Claude Code to explain its choices:
+Don't be shy about asking your CLI assistant to explain its choices:
 
 :::{.callout-tip}
 ## Example Prompt
@@ -120,7 +115,7 @@ Understanding builds over time. You don't need to learn everything, but asking o
 
 ### Break Complex Features Down
 
-If a feature feels big, ask Claude Code to help break it down:
+If a feature feels big, ask your CLI assistant to help break it down:
 
 :::{.callout-tip}
 ## Example Prompt
@@ -131,7 +126,7 @@ Smaller steps are easier to build, test, and debug.
 
 ## Using Plan Mode
 
-Plan mode is one of Claude Code's most powerful features. Instead of immediately writing code, Claude Code stops to think, research your codebase, and design an approach first.
+Plan mode is one of your CLI assistant's most powerful features. Instead of immediately writing code, your CLI assistant stops to think, research your codebase, and design an approach first.
 
 To enter plan mode, start your message with `/plan`:
 
@@ -140,7 +135,7 @@ To enter plan mode, start your message with `/plan`:
 "/plan I want to add a notification system where users can receive email and in-app notifications for various events. Please design how this would work before implementing anything."
 :::
 
-In plan mode, Claude Code will:
+In plan mode, Your CLI assistant will:
 
 1. Research your existing codebase to understand what's already there
 2. Consider different approaches and their trade-offs
@@ -149,7 +144,7 @@ In plan mode, Claude Code will:
 
 You can then review the plan and:
 
-- **Approve it** to let Claude Code proceed with implementation
+- **Approve it** to let your CLI assistant proceed with implementation
 - **Ask questions** about parts you don't understand
 - **Request changes** if you want a different approach
 - **Reject it** and ask for alternatives
@@ -201,7 +196,7 @@ Error messages are clues. When you see an error, copy the entire thing:
 What's causing this?"
 :::
 
-Claude Code can usually diagnose problems from error messages.
+Your CLI assistant can usually diagnose problems from error messages.
 
 ### Ask for Debugging Help
 
@@ -210,7 +205,7 @@ Claude Code can usually diagnose problems from error messages.
 "The feature we just built isn't working correctly. Can you add some debugging to help us figure out what's going wrong?"
 :::
 
-Sometimes finding the problem requires investigation. Claude Code can add temporary code to help trace what's happening.
+Sometimes finding the problem requires investigation. Your CLI assistant can add temporary code to help trace what's happening.
 
 ## Iterating on Design
 
@@ -226,13 +221,13 @@ You don't need to know exactly what you want from the start. It's often easier t
 "I'd like the color scheme to be more professional. Think blues and grays instead of the bright colors."
 :::
 
-Describe the direction you want, and Claude Code will adjust.
+Describe the direction you want, and Your CLI assistant will adjust.
 
 ## Managing Your Session
 
 A few practical tips:
 
-**Long sessions**: Claude Code maintains context throughout a session, but very long sessions can sometimes cause confusion. You have a few options:
+**Long sessions**: Your CLI assistant maintains context throughout a session, but very long sessions can sometimes cause confusion. You have a few options:
 
 Use `/compact` to summarize the conversation so far, reducing clutter while keeping important context:
 
@@ -248,7 +243,7 @@ Or start completely fresh if things get too messy:
 "/clear Let's start fresh. Read the project files and give me a summary of where we are."
 :::
 
-**Taking breaks**: You can quit Claude Code (`/exit` or `Ctrl+C`) and come back later. Next time, Claude Code will read your files to understand the project state.
+**Taking breaks**: You can quit your CLI assistant (`/exit` or `Ctrl+C`) and come back later. Next time, your CLI assistant will read your files to understand the project state.
 
 **Multiple features at once**: Generally, focus on one thing at a time. Finish one feature before starting another.
 

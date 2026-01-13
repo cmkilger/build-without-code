@@ -12,7 +12,7 @@ book:
     - index.qmd
     - chapters/01-introduction.qmd
     - chapters/02-terminal-basics.qmd
-    - chapters/03-installing-claude-code.qmd
+    - chapters/03-installing-cli-assistant.qmd
     - chapters/04-understanding-landscape.qmd
     - chapters/05-designing-with-ai.qmd
     - chapters/06-version-control.qmd

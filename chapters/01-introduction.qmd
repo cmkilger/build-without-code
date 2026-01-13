@@ -6,40 +6,40 @@ For decades, building software required specialized knowledge. Developers spent 
 
 AI has changed this equation.
 
-Tools like Claude Code can understand what you want to build, write the code to make it happen, and help you navigate the entire process from idea to launch. You provide the vision and make the decisions; Claude Code handles the implementation.
+Tools like Claude Code, OpenAI Codex CLI, and GitHub Copilot CLI can understand what you want to build, write the code to make it happen, and help you navigate the entire process from idea to launch. You provide the vision and make the decisions; your CLI assistant handles the implementation.
 
 This isn't magic, and it's not perfect. You'll still need to learn some concepts and terminology. You'll encounter problems that require patience to solve. But the barrier between "having an idea" and "having a working app" has never been lower.
 
 ## The AI-as-Development-Team Mindset
 
-Think of Claude Code as a skilled developer who works for you. Like any good employee, it:
+Think of your CLI assistant as a skilled developer who works for you. Like any good employee, it:
 
 - Knows how to write code in many languages
 - Can research solutions to problems
 - Will explain its decisions if you ask
 - Takes direction well when you're clear about what you want
 
-Also like any employee, Claude Code:
+Also like any employee, your CLI assistant:
 
 - Needs clear instructions to do its best work
 - May occasionally misunderstand your intent
 - Benefits from feedback and course correction
 - Works better when you understand enough to ask good questions
 
-Your job isn't to know *how* to build software. Your job is to know *what* you want and to communicate that clearly. You're the product owner. Claude Code is your development team.
+Your job isn't to know *how* to build software. Your job is to know *what* you want and to communicate that clearly. You're the product owner. Your CLI assistant is your development team.
 
 ## What You'll Need
 
 To follow this guide, you'll need:
 
 **A computer**
-: The examples use macOS, but the concepts apply to Windows and Linux. Claude Code can help you adapt commands for your platform.
+: The examples use macOS, but the concepts apply to Windows and Linux. Your CLI assistant can help you adapt commands for your platform.
 
 **An internet connection**
-: Claude Code requires an internet connection to work.
+: All three CLIs require internet access for authentication and model usage.
 
-**An Anthropic account**
-: You'll need to create an account at [anthropic.com](https://anthropic.com) to use Claude Code. Claude Code uses pay-per-use billing based on how much you interact with it---you pay for what you use. For individual projects, costs are typically modest (often under $20/month for active development).
+**An account or subscription**
+: You'll need an account for your chosen tool (Anthropic, OpenAI/ChatGPT, or GitHub Copilot). If you already pay for one, it's a convenient place to start.
 
 **Patience and curiosity**
 : Some of this will feel unfamiliar. That's normal. Take it step by step.
@@ -73,16 +73,18 @@ This guide will take you from zero to a working, deployed application. Getting f
 
 ## A Note on Other AI Tools
 
-This guide focuses on Claude Code because it's exceptionally good at writing and modifying code. However, it's worth knowing that other AI tools can be valuable complements:
+Other AI tools can be valuable complements:
 
 **ChatGPT, claude.ai,** and similar conversational AI tools are often better for high-level brainstorming, exploring ideas, and having extended conversations about your project vision. When you're trying to figure out *what* to build, these tools can be helpful thinking partners.
 
-**Claude Code** excels when you know what you want and need it built. It's a command-line tool that runs in Terminal---not a desktop app with buttons and menus, but a text-based interface where you type messages and Claude Code responds. It can read and write files, run commands, and iterate on actual code. When you're ready to *make* something, Claude Code is your tool.
+**CLI assistants** (Claude Code, Codex CLI, Copilot CLI) excel when you know what you want and need it built. They run in Terminal---not a desktop app with buttons and menus, but a text-based interface where you type messages and the assistant responds. They can read and write files, run commands, and iterate on actual code. When you're ready to *make* something, your CLI is the tool.
 
-You can absolutely use Claude Code for brainstorming too---especially in "plan mode," which we'll cover later. But don't hesitate to use whichever tool feels most natural for the task at hand.
+**IDEs (Integrated Development Environments)** are full-featured coding workspaces like VS Code, Xcode, or JetBrains tools. You may hear about AI assistants that integrate with these. They're designed for developers who write code themselves—not what we're doing here. We'll stick with the CLI approach throughout this guide.
+
+You can absolutely use your CLI assistant for brainstorming too---especially in "plan mode," which we'll cover later. But don't hesitate to use whichever tool feels most natural for the task at hand.
 
 ## Let's Begin
 
-With expectations set, it's time to get your hands dirty. In the next chapter, you'll learn the handful of Terminal commands you need to work effectively with Claude Code.
+With expectations set, it's time to get your hands dirty. In the next chapter, you'll learn the handful of Terminal commands you need to work effectively with your CLI assistant.
 
 Don't worry---it's less than you think.

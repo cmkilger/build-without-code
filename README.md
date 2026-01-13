@@ -43,11 +43,11 @@ Output files are generated in the `_output/` directory.
 
 1. Introduction
 2. Getting Started with the Terminal
-3. Installing Claude Code
+3. Installing Your CLI Assistant
 4. Understanding the Landscape
 5. Designing Your Project with AI
 6. Version Control with GitHub
-7. Building with Claude Code
+7. Building with Your CLI Assistant
 8. Running and Testing Your Project
 9. Quality Assurance with AI
 10. Deploying Your Project

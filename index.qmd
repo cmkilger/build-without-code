@@ -6,9 +6,22 @@ In the past, turning that idea into reality meant one of three things: learn to 
 
 That's no longer true.
 
-AI coding assistants---Claude Code, GitHub Copilot CLI, OpenAI Codex, and others---have fundamentally changed what's possible for non-technical people. You can now describe what you want in plain English and watch as working code appears in front of you. You can build real, functional applications---web services, iOS apps, Android apps---without writing a single line of code yourself.
+AI coding assistants---Claude Code, GitHub Copilot CLI, OpenAI Codex CLI, and others---have fundamentally changed what's possible for non-technical people. You can now describe what you want in plain English and watch as working code appears in front of you. You can build real, functional applications---web services, iOS apps, Android apps---without writing a single line of code yourself.
 
-This guide uses Claude Code, which we believe offers the best experience for this kind of work. But if you already have a ChatGPT Plus or GitHub Copilot subscription, you may already have access to similar tools---OpenAI Codex and GitHub Copilot CLI, respectively. They're capable alternatives worth exploring if you'd rather not pay for another service. Most of the principles in this guide apply regardless of which assistant you choose.
+This guide supports three command-line assistants from the start: Claude Code, OpenAI Codex CLI, and GitHub Copilot CLI. Most of the principles apply to all three. When commands differ, you'll see clear, tool-specific blocks so you can follow your chosen track.
+
+## Choose Your CLI Assistant
+
+Any of these tools will work for this guide. If you already pay for one, start there. Otherwise, pick whichever appeals to you—you can always switch later.
+
+**Claude Code**
+: Best if you already use Claude or want a purpose-built coding CLI with a native installer. Works on macOS and Linux, with Windows support via PowerShell/CMD or WSL.
+
+**OpenAI Codex CLI**
+: Best if you already have OpenAI access to Codex. Runs locally and is open source. Official support is macOS/Linux; Windows is experimental (WSL recommended).
+
+**GitHub Copilot CLI**
+: Best if you already pay for Copilot and want tight GitHub integration. It's in public preview and can be disabled by org policy; works on macOS, Linux, and Windows.
 
 ## Who This Guide Is For
 
@@ -25,7 +38,7 @@ You don't need to understand programming languages, databases, or servers. You j
 
 By the end of this guide, you'll know how to:
 
-- Use Claude Code to build and modify software projects
+- Use a CLI assistant (Claude Code, Codex CLI, or Copilot CLI) to build and modify software projects
 - Have productive conversations with AI about technical decisions
 - Manage your code safely with version control
 - Run and test your application locally
@@ -35,7 +48,7 @@ By the end of this guide, you'll know how to:
 
 This guide won't teach you to code. That's the point.
 
-You'll learn enough vocabulary to have informed conversations with AI, but you won't need to understand the code it writes. Think of yourself as a product owner directing a development team---you decide *what* to build; Claude Code figures out *how* to build it.
+You'll learn enough vocabulary to have informed conversations with AI, but you won't need to understand the code it writes. Think of yourself as a product owner directing a development team---you decide *what* to build; your CLI assistant figures out *how* to build it.
 
 ## How to Use This Guide
 
@@ -48,10 +61,10 @@ When you see a boxed prompt like this:
 "Help me verify that everything is installed correctly."
 :::
 
-That's an example of what you might say to Claude Code. Feel free to adapt these prompts to your specific situation---they're starting points, not scripts.
+That's an example of what you might say to your CLI assistant. Feel free to adapt these prompts to your specific situation---they're starting points, not scripts.
 
 Let's get started.
 
 ---
 
-*This guide was written using Claude Code---the very tool it teaches you to use.*
+*This guide was written using Claude Code—using the very methods it teaches.*

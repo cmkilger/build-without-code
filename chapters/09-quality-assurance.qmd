@@ -1,6 +1,6 @@
 # Quality Assurance with AI
 
-Claude Code can write code quickly, but speed isn't everything. Code should also be secure, maintainable, and free of obvious bugs. This chapter covers how to have Claude Code review and improve its own work.
+Your CLI assistant can write code quickly, but speed isn't everything. Code should also be secure, maintainable, and free of obvious bugs. This chapter covers how to have your CLI assistant review and improve its own work.
 
 Think of this as quality control at the factory---checking the work before it ships.
 
@@ -13,18 +13,18 @@ AI-generated code can have issues:
 - **Inefficiencies**: Code that works but could be better
 - **Inconsistencies**: Different parts of the code doing similar things in different ways
 
-Having Claude Code review its work catches many of these issues before they cause problems.
+Having your CLI assistant review its work catches many of these issues before they cause problems.
 
 ## Self-Review
 
-After implementing a feature, ask Claude Code to review what it just created:
+After implementing a feature, ask your CLI assistant to review what it just created:
 
 :::{.callout-tip}
 ## Example Prompt
 "Review the code you just wrote. Are there any bugs, edge cases we didn't handle, or improvements you'd suggest?"
 :::
 
-This often catches issues Claude Code didn't think about during initial implementation. It's looking at the code with fresh eyes.
+This often catches issues your CLI assistant didn't think about during initial implementation. It's looking at the code with fresh eyes.
 
 Another useful approach:
 
@@ -33,7 +33,7 @@ Another useful approach:
 "Look at the changes we made today. Is there anything that could break or cause problems? Be critical."
 :::
 
-Explicitly asking for criticism helps surface concerns Claude Code might otherwise not mention.
+Explicitly asking for criticism helps surface concerns your CLI assistant might otherwise not mention.
 
 ## Security Review
 
@@ -49,7 +49,7 @@ Security deserves special attention. Even simple applications can have vulnerabi
 - Insecure data handling"
 :::
 
-You don't need to understand these terms. Claude Code does, and will check for them.
+You don't need to understand these terms. Your CLI assistant does, and will check for them.
 
 Some common security issues it might find:
 
@@ -58,7 +58,7 @@ Some common security issues it might find:
 - **Exposed sensitive data**: Accidentally sending private information to the browser
 - **Weak authentication**: Password requirements that are too lenient, or sessions that don't expire
 
-When Claude Code finds issues, it will explain the risk and suggest fixes.
+When your CLI assistant finds issues, it will explain the risk and suggest fixes.
 
 ## Code Quality Review
 
@@ -84,7 +84,7 @@ Sometimes code becomes more complex than necessary as features are added:
 "Look at how we implemented [feature]. Is there a simpler way to do this? I want to keep the code as straightforward as possible."
 :::
 
-Simpler code has fewer bugs, is easier to understand, and is easier to change. If Claude Code can accomplish the same thing with less complexity, that's usually better.
+Simpler code has fewer bugs, is easier to understand, and is easier to change. If Your CLI assistant can accomplish the same thing with less complexity, that's usually better.
 
 ## Asking "What Could Go Wrong?"
 
@@ -99,7 +99,7 @@ A powerful question for quality assurance:
 - What if the network is slow or unreliable?"
 :::
 
-This surfaces scenarios you might not have considered. Claude Code can then add appropriate error handling.
+This surfaces scenarios you might not have considered. Your CLI assistant can then add appropriate error handling.
 
 ## Performance Review
 
@@ -117,22 +117,22 @@ Performance issues often come from:
 - Loading large images or files
 - Running expensive calculations on every page load
 
-Claude Code can identify and fix these patterns.
+Your CLI assistant can identify and fix these patterns.
 
 ## Documentation
 
-Good documentation helps you (and Claude Code) understand the project later:
+Good documentation helps you (and your CLI assistant) understand the project later:
 
 :::{.callout-tip}
 ## Example Prompt
 "Add comments to the code explaining what the non-obvious parts do. Don't over-comment simple things, but explain the business logic and any tricky parts."
 :::
 
-You probably won't read these comments, but Claude Code will when you come back to the project later. It helps it understand the intent behind the code.
+You probably won't read these comments, but Your CLI assistant will when you come back to the project later. It helps it understand the intent behind the code.
 
 ## Automated Testing
 
-Professional developers write tests---code that automatically verifies other code works correctly. You can have Claude Code do this too:
+Professional developers write tests---code that automatically verifies other code works correctly. You can have your CLI assistant do this too:
 
 :::{.callout-tip}
 ## Example Prompt
@@ -150,7 +150,7 @@ Tests serve as:
 "Run the tests and fix any that are failing."
 :::
 
-You don't need to understand how to write tests. Just know that having them is valuable, and Claude Code can create and run them.
+You don't need to understand how to write tests. Just know that having them is valuable, and Your CLI assistant can create and run them.
 
 ## When to Review
 
@@ -178,7 +178,7 @@ Make this part of your routine.
 
 ## Summary
 
-Quality assurance with Claude Code means:
+Quality assurance with your CLI assistant means:
 
 1. Having it review its own code for bugs and improvements
 2. Checking specifically for security vulnerabilities

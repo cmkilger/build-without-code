@@ -11,7 +11,7 @@ Code on its own doesn't do anything. You need to run it to see your application 
 "How do I run this project locally? Start the development server."
 :::
 
-Claude Code will run the appropriate command for your tech stack. Common patterns include:
+Your CLI assistant will run the appropriate command for your tech stack. Common patterns include:
 
 - `npm run dev` for many JavaScript projects
 - `python manage.py runserver` for Django projects
@@ -48,7 +48,7 @@ Mobile apps are trickier because they need to run on a phone or tablet. You have
 
 For iOS development, you'll need Xcode installed (free from the Mac App Store, but large). For Android, you'll need Android Studio.
 
-Claude Code can help you set these up, but be prepared---mobile development tooling is more complex than web.
+Your CLI assistant can help you set these up, but be prepared---mobile development tooling is more complex than web.
 
 **Physical devices**: You can connect a real phone to your computer and run the app on it.
 
@@ -197,6 +197,6 @@ You now know how to:
 - View it in a browser (or simulator for mobile)
 - Test features manually
 - Use browser developer tools to spot errors
-- Describe bugs clearly so Claude Code can fix them
+- Describe bugs clearly so Your CLI assistant can fix them
 
-The more you test, the more solid your application becomes. In the next chapter, we'll cover having Claude Code review its own work for quality and security issues.
+The more you test, the more solid your application becomes. In the next chapter, we'll cover having your CLI assistant review its own work for quality and security issues.

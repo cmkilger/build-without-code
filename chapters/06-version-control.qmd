@@ -49,7 +49,7 @@ Git usually comes pre-installed on Mac. Let's verify and configure it.
 "Help me check if Git is installed and configure it with my name and email for commits."
 :::
 
-Claude Code will run the necessary commands. You'll need to provide:
+Your CLI assistant will run the necessary commands. You'll need to provide:
 
 - Your name (used to label your commits)
 - Your email (should match your GitHub account email)
@@ -62,20 +62,16 @@ Navigate to your project folder in Terminal:
 cd ~/Projects/my-app
 ```
 
-Then start Claude Code:
+Then start your CLI assistant (see Chapter 3 for the command for your chosen tool).
 
-```bash
-claude
-```
-
-Now ask Claude Code to set up version control:
+Now ask your CLI assistant to set up version control:
 
 :::{.callout-tip}
 ## Example Prompt
 "Initialize a Git repository for this project and create a .gitignore file appropriate for [your tech stack, e.g., a Node.js project]."
 :::
 
-Claude Code will:
+Your CLI assistant will:
 
 1. Run `git init` to create a repository
 2. Create a `.gitignore` file (which tells Git what files to ignore, like temporary files and secrets)
@@ -84,14 +80,14 @@ Claude Code will:
 
 Your application will likely have secrets---API keys, database passwords, and other sensitive information. These should **never** be committed to Git. Once something is in your Git history, it's very hard to remove, and if your repository is public (or ever becomes public), those secrets are exposed.
 
-Instead, secrets go in a `.env` file, which should be listed in `.gitignore` so Git ignores it. Claude Code knows to do this, but it's worth double-checking:
+Instead, secrets go in a `.env` file, which should be listed in `.gitignore` so Git ignores it. Your CLI assistant knows to do this, but it's worth double-checking:
 
 :::{.callout-tip}
 ## Example Prompt
 "Make sure our .gitignore properly excludes sensitive files like .env, API keys, and any credentials."
 :::
 
-If Claude Code ever writes a secret directly into code (like an API key in a configuration file), ask it to move that to an environment variable instead.
+If your CLI assistant ever writes a secret directly into code (like an API key in a configuration file), ask it to move that to an environment variable instead.
 
 ## Connecting to GitHub
 
@@ -104,11 +100,11 @@ Now let's connect your local repository to GitHub:
 
 This usually involves:
 
-1. Creating a new repository on GitHub (Claude Code will guide you through this)
+1. Creating a new repository on GitHub (Your CLI assistant will guide you through this)
 2. Running commands to connect your local repository to the GitHub one
 3. Pushing your initial code to GitHub
 
-You may need to authenticate with GitHub. Claude Code will help you through this process, which might involve creating a personal access token or using SSH keys.
+You may need to authenticate with GitHub. Your CLI assistant will help you through this process, which might involve creating a personal access token or using SSH keys.
 
 ## Understanding the Basics
 
@@ -142,9 +138,9 @@ Branches let you work on different versions of your project simultaneously. The 
 
 For now, you'll mostly work on the main branch.
 
-## Working with Claude Code
+## Working with Your CLI Assistant
 
-Claude Code understands Git and will help you manage version control throughout development.
+Your CLI assistant understands Git and will help you manage version control throughout development.
 
 :::{.callout-tip}
 ## Example Prompt
@@ -161,7 +157,7 @@ Claude Code understands Git and will help you manage version control throughout 
 "I think I broke something. Can you show me what changed in the last few commits so I can figure out what went wrong?"
 :::
 
-Claude Code will run the necessary Git commands and explain what's happening.
+Your CLI assistant will run the necessary Git commands and explain what's happening.
 
 ## Committing Regularly
 
@@ -179,7 +175,7 @@ A good commit message briefly describes what changed:
 - "Fix bug where login button didn't work"
 - "Update homepage styling"
 
-Claude Code will write these messages for you, but it helps to be specific about what you've accomplished when you ask for a commit.
+Your CLI assistant will write these messages for you, but it helps to be specific about what you've accomplished when you ask for a commit.
 
 ## Recovering from Mistakes
 
@@ -195,7 +191,7 @@ One of version control's biggest benefits is the ability to undo mistakes.
 "I want to undo the last commit but keep working on the changes."
 :::
 
-Claude Code can help you navigate these situations. Don't be afraid to experiment---that's what version control is for.
+Your CLI assistant can help you navigate these situations. Don't be afraid to experiment---that's what version control is for.
 
 ## What You've Accomplished
 
@@ -204,6 +200,6 @@ You now have:
 - A Git repository tracking your project
 - A GitHub account with your project backed up online
 - The ability to commit changes and recover from mistakes
-- Claude Code as your guide for version control operations
+- Your CLI assistant as your guide for version control operations
 
 With this safety net in place, you're ready to start building. In the next chapter, we'll create the actual structure of your application.

@@ -34,7 +34,7 @@ What frontends are built with depends on the platform:
 
 Modern applications often use **frameworks**---pre-built collections of code that handle common tasks. Popular web frameworks include React, Vue, and Svelte.
 
-You don't need to know how to write any of this. You just need to know that when Claude Code talks about "the frontend," it means the user-facing part of your application.
+You don't need to know how to write any of this. You just need to know that when your CLI assistant talks about "the frontend," it means the user-facing part of your application.
 
 ### Backend: The Brain
 

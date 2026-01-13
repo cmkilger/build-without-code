@@ -2,7 +2,7 @@
 
 Your application works on your computer. Now it's time to make it accessible to the world. Deployment means putting your code on a server where anyone can access it.
 
-This chapter covers the concepts and walks you through the process with Claude Code's help.
+This chapter covers the concepts and walks you through the process with your CLI assistant's help.
 
 ## What Deployment Means
 
@@ -16,7 +16,7 @@ The specifics depend on what you're deploying---web applications, mobile apps, a
 
 ## Things You'll Need to Do Yourself
 
-Some steps require you to create accounts or take actions that Claude Code can't do for you:
+Some steps require you to create accounts or take actions that Your CLI assistant can't do for you:
 
 - **Create accounts** on hosting platforms
 - **Enter payment information** (many have free tiers, but require a card on file)
@@ -24,7 +24,7 @@ Some steps require you to create accounts or take actions that Claude Code can't
 - **Purchase a domain name** (if you want a custom one)
 - **Accept terms of service** and agreements
 
-Claude Code will tell you when these steps are needed and guide you through them.
+Your CLI assistant will tell you when these steps are needed and guide you through them.
 
 ## Web Application Deployment
 
@@ -42,7 +42,7 @@ For web applications, several platforms make deployment straightforward:
 
 **Fly.io**: Good for applications that need to be close to users globally.
 
-You don't need to research all of these. Ask Claude Code:
+You don't need to research all of these. Ask your CLI assistant:
 
 :::{.callout-tip}
 ## Example Prompt
@@ -65,7 +65,7 @@ The general process usually involves:
 3. **Setting environment variables** (secrets like API keys)
 4. **Triggering the first deployment**
 
-Claude Code will handle the technical configuration. You'll handle the clicking and account authorization.
+Your CLI assistant will handle the technical configuration. You'll handle the clicking and account authorization.
 
 ### Environment Variables
 
@@ -91,7 +91,7 @@ Hosting platforms give you a free URL (like `my-app.vercel.app`), but you probab
 "I bought the domain myapp.com from Namecheap. Help me connect it to my Vercel deployment."
 :::
 
-This process can be confusing, but Claude Code can guide you through the specific steps.
+This process can be confusing, but Your CLI assistant can guide you through the specific steps.
 
 ## Mobile App Deployment
 
@@ -162,7 +162,7 @@ Your database needs to live somewhere accessible:
 
 ### Connecting Everything
 
-In production, your frontend needs to talk to your backend, which needs to talk to your database. Claude Code will help configure these connections:
+In production, your frontend needs to talk to your backend, which needs to talk to your database. Your CLI assistant will help configure these connections:
 
 :::{.callout-tip}
 ## Example Prompt

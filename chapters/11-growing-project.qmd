@@ -42,7 +42,7 @@ Then prioritize ruthlessly. You can't do everything, so focus on what matters mo
 
 When you're ready to add a feature:
 
-1. **Start a new session** with Claude Code
+1. **Start a new session** with your CLI assistant
 2. **Orient it** to your current codebase
 3. **Describe the feature** you want to add
 4. **Implement, test, and deploy** as before
@@ -86,7 +86,7 @@ Periodically:
 "Check if any of our dependencies have updates available. Are there any security updates we should apply?"
 :::
 
-Be cautious with major updates. Sometimes they require code changes. Claude Code can help navigate this:
+Be cautious with major updates. Sometimes they require code changes. Your CLI assistant can help navigate this:
 
 :::{.callout-tip}
 ## Example Prompt
@@ -127,7 +127,7 @@ Most applications won't need to worry about scaling for a long time. Don't optim
 
 ## When to Get Human Help
 
-Claude Code is remarkably capable, but some situations benefit from human expertise:
+Your CLI assistant is remarkably capable, but some situations benefit from human expertise:
 
 **Complex integrations**: Connecting to unusual systems or legacy software
 
@@ -145,7 +145,7 @@ For these, consider:
 - Consulting with domain experts
 - Using professional services (legal, design, etc.)
 
-You can still use Claude Code to prepare---documenting what you have, listing questions, organizing information for a consultant.
+You can still use your CLI assistant to prepare---documenting what you have, listing questions, organizing information for a consultant.
 
 ## Managing Scope
 
@@ -178,13 +178,13 @@ Software development is mentally demanding, even when AI is doing the coding. It
 - Let the project rest while you gather feedback
 - Work on something else and come back later
 
-Your project will be there when you return. Claude Code doesn't forget, and your git history preserves everything.
+Your project will be there when you return. Your CLI assistant doesn't forget, and your git history preserves everything.
 
 ## Learning More
 
 You've come far, but there's always more to learn. If you want to go deeper:
 
-- **Ask Claude Code to explain** things you're curious about
+- **Ask your CLI assistant to explain** things you're curious about
 - **Read documentation** for tools you're using
 - **Follow blogs or communities** related to your tech stack
 - **Build more things**---experience is the best teacher

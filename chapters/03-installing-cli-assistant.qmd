@@ -1,0 +1,116 @@
+# Installing Your CLI Assistant
+
+Before we can start building, we need to install the CLI you chose: Claude Code, OpenAI Codex CLI, or GitHub Copilot CLI. We recommend Homebrew for macOS because it keeps installs clean and easy to update. If you run into any issues during installation, you can ask a chat AI like ChatGPT or claude.ai---just describe the error you're seeing.
+
+## Step 1: Confirm Your Choice
+
+If you haven't picked a tool yet, decide now. We'll use your choice throughout the book.
+
+- **Claude Code** if you want a purpose-built coding CLI and already use Claude.
+- **Codex CLI** if you already have OpenAI access to Codex.
+- **Copilot CLI** if you already pay for GitHub Copilot.
+
+:::{.callout-note}
+## About Subscriptions
+Each tool offers free and paid tiers. Free tiers work for light exploration, but you'll likely hit usage limits during active development. Expect to use a paid subscription ($20-30/month) for serious project work. If you hit a rate limit, your CLI will pause until the limit resets—your work isn't lost, you just wait.
+:::
+
+## Step 2: Install
+
+### Claude Code
+
+Homebrew (recommended):
+
+```bash
+brew install --cask claude-code
+```
+
+Launch it:
+
+```bash
+claude
+```
+
+### OpenAI Codex CLI
+
+Homebrew (recommended):
+
+```bash
+brew install --cask codex
+```
+
+Launch it:
+
+```bash
+codex
+```
+
+### GitHub Copilot CLI
+
+Homebrew (recommended):
+
+```bash
+brew install --cask copilot-cli
+```
+
+Launch it:
+
+```bash
+copilot
+```
+
+Then authenticate:
+
+```
+/login
+```
+
+:::{.callout-note}
+If you can't use Homebrew, see the official docs for alternative install options:
+
+- Claude Code: <https://code.claude.com/docs/en/setup>
+- Codex CLI: <https://developers.openai.com/codex/quickstart>
+- Copilot CLI: <https://docs.github.com/en/copilot/how-tos/set-up/install-copilot-cli>
+:::
+
+## Step 3: First Launch and Sanity Check
+
+Run your CLI in a project folder and make sure it responds to a simple prompt. On first launch, you'll be prompted to log in (or run `/login`) for your chosen tool.
+
+:::{.callout-tip}
+## Example Prompt
+"Help me verify that everything is installed correctly. Check that I have git available."
+:::
+
+If the tool can run a basic command and explain the result, you're ready to continue.
+
+## Understanding the Interface
+
+Each CLI has its own interactive workflow. Here are the basics you'll use most often.
+
+### Claude Code
+
+- Start an interactive session with `claude`.
+- Use `/help` to list available commands.
+- Type `/clear` to clear the current conversation.
+- Press `Esc` to cancel a response mid-generation.
+- Type `/exit` or press `Ctrl+C` to quit.
+- Use `/resume` to continue a previous session where you left off.
+
+### OpenAI Codex CLI
+
+- Start the full-screen interactive UI with `codex`.
+- Type `/approvals` to change approval modes.
+- Type `/status` to see the current model and approval settings.
+- Type `/diff` to review changes before you commit.
+- Type `/exit` or press `Ctrl+C` to quit.
+
+### GitHub Copilot CLI
+
+- Start the interactive session with `copilot`.
+- If you're not logged in, run `/login` to authenticate.
+- Type `?` in the prompt or run `copilot help` to see commands and options.
+
+## Next Steps
+
+With your CLI installed and working, you're ready to start building. But first, let's make sure you understand the landscape---what a "tech stack" is and what the pieces of a modern application look like.
