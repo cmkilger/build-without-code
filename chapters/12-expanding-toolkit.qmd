@@ -1,0 +1,219 @@
+# Expanding Your Toolkit
+
+You've built and deployed a working application using your CLI assistant. The approach you've learned---describing what you want, iterating based on feedback, committing progress---works. You don't need anything else.
+
+But as your confidence grows, you might get curious. What other tools are out there? What do developers use? Could anything make certain tasks easier?
+
+This chapter explores tools that complement your CLI workflow. None of them are required. Think of this as a tour of what's available, so you can make informed choices about what (if anything) to add to your process.
+
+Earlier in this book, we said IDEs are designed for developers who write code themselves. That's still true. But understanding what these tools do---and when they might help---is valuable, especially if you work with technical collaborators or want to peek under the hood of your own project.
+
+## Desktop Companions
+
+Your CLI assistant lives in the Terminal. But there are desktop applications that bring AI assistance to your whole computer, plus visual tools that can simplify certain workflows.
+
+### Claude for Mac
+
+Claude for Mac is a desktop application that lets you chat with Claude outside of the Terminal. It sits on your computer like any other app, ready when you need it.
+
+What makes it particularly interesting is its ability to see your screen. You can ask Claude to look at what you're viewing---an error message, a design, a confusing interface---and get help in context.
+
+:::{.callout-tip}
+## Example Prompt
+"Can you look at my screen? I'm getting an error message and I'm not sure what it means."
+:::
+
+:::{.callout-tip}
+## Example Prompt
+"I'm looking at a competitor's app. What features do you notice that we might consider adding?"
+:::
+
+Claude for Mac is useful for quick questions, research, and brainstorming---moments when you're not actively building but want AI assistance.
+
+You can also run Claude Code directly from Claude for Mac instead of Terminal. The experience is similar, with a few interface differences. This gives you one app for both general Claude conversations and development work.
+
+Claude for Mac also has a feature called Cowork that can work autonomously with your files and browser---organizing documents, sending messages, filling out forms, and handling multi-step tasks while you focus on other things. Think of it as Claude Code's approach applied to general computer tasks, not just coding.
+
+### ChatGPT Desktop
+
+OpenAI offers a similar desktop application for ChatGPT. Like Claude for Mac, it provides a conversational AI interface outside the Terminal.
+
+ChatGPT can also view your screen and help with context-specific questions. One notable feature is Memory---ChatGPT remembers details about you and your preferences across conversations, which can make interactions feel more personalized over time.
+
+### GitHub Desktop
+
+Version control is powerful, but the command line can feel abstract. GitHub Desktop provides a visual interface for the same Git operations you've been doing in Terminal.
+
+With GitHub Desktop, you can:
+
+- See which files have changed, with the actual changes highlighted
+- Stage and commit changes by clicking rather than typing commands
+- View your commit history as a visual timeline
+- Push and pull with a button instead of a command
+- Use Copilot to automatically generate commit messages based on your changes
+
+This doesn't replace what your CLI assistant does---it's a different way to interact with the same version control system. Some people find the visual approach more intuitive for understanding what's changed in their project.
+
+To get started, download GitHub Desktop and open your project folder. It will recognize the Git repository your CLI assistant created and show you the current state.
+
+## Peeking Under the Hood
+
+Your CLI assistant creates and modifies code, but you never have to look at that code directly. The Terminal shows you what's happening, and that's enough.
+
+But what if you're curious? What if you want to see the actual files your project contains? That's where code editors come in.
+
+### What You'll See
+
+A code editor shows you your project as a collection of files and folders. You'll see names like `index.html`, `app.js`, or `styles.css`. You can open any file and see its contents---the actual code your CLI assistant has been writing.
+
+You don't need to understand the code to benefit from looking. Seeing the structure helps you understand how your project is organized. Noticing patterns---like "all the page layouts are in this folder"---builds intuition over time.
+
+### Visual Studio Code
+
+Visual Studio Code (often called "VS Code") is the most popular code editor, and it's free. It works on Mac, Windows, and Linux.
+
+To try it:
+
+1. Download VS Code from code.visualstudio.com
+2. Open your project folder (File > Open Folder)
+3. Browse the file tree on the left side
+
+The left panel shows your files and folders. Click any file to see its contents. You're not expected to edit anything---just look around.
+
+VS Code also has AI extensions that can help if you do want to make quick edits yourself:
+
+- **GitHub Copilot**: Suggests code as you type, answers questions about your codebase, and lets you choose between different AI models including Claude
+- **Claude Code extension**: If you use Claude Code as your CLI assistant, there's a VS Code extension that provides a visual interface with inline code previews and diff views
+
+These extensions are designed for people who edit code directly. If you're just curious about your project structure, you don't need them. But if you find yourself wanting to make small changes without switching to your CLI assistant, they're there.
+
+:::{.callout-tip}
+## Example Prompt (to your CLI assistant)
+"I'm going to open my project in VS Code to look around. Which files are the most important ones to understand?"
+:::
+
+### Cursor
+
+Cursor is a code editor built specifically around AI assistance. It's based on VS Code, so it looks and works similarly, but AI features are built in from the start rather than added as extensions.
+
+Cursor can:
+
+- Chat with you about your codebase, with full context of your files
+- Make edits across multiple files based on your descriptions
+- Explain code when you highlight it
+- Run background agents that work on tasks while you do other things
+
+Cursor supports multiple AI models, so you can choose which one to use. In many ways, it brings CLI-assistant-style interaction into a visual editor. If you're the kind of person who prefers seeing files visually while working, Cursor might appeal to you.
+
+The trade-off is that Cursor is a paid product after the free trial (starting around $20/month), and it's another tool to learn. Your CLI assistant in Terminal remains fully capable---Cursor is an alternative interface, not an upgrade.
+
+### Other Editors Worth Knowing About
+
+**JetBrains IDEs**: These are professional-grade editors specialized for specific languages (PyCharm for Python, WebStorm for JavaScript, etc.). They're powerful but complex. You're unlikely to need them unless you're working with developers who use them.
+
+**Windsurf**: A direct competitor to Cursor, also built on VS Code. Its AI agent (called Cascade) can make multi-file edits and run terminal commands. A notable feature is its "memory" system that learns your coding patterns over time. Pricing starts around $15/month.
+
+**Zed**: A fast, minimal editor written in Rust with AI features built in. The editor itself is free and open source, focused on speed and collaboration. Some AI features require a paid plan or your own API keys, but there's a free tier to try it out.
+
+**Xcode**: Apple's IDE for building iOS, Mac, and other Apple platform apps. If you're building for Apple platforms, you'll need Xcode for certain tasks like running the iOS simulator and submitting to the App Store. Your CLI assistant handles the code, but Xcode is where you'll do the final steps. It's free from the Mac App Store.
+
+**Android Studio**: Google's IDE for building Android apps. Similar to Xcode, you'll need it for running the Android emulator and preparing apps for the Play Store. It's free and available for Mac, Windows, and Linux.
+
+:::{.callout-note}
+If you find yourself wanting to edit code directly in these tools, that's a sign you're developing technical skills. That's great if it interests you, but it's not required. Your CLI assistant can handle all the implementation work.
+:::
+
+## Connecting Your CLI to Other Services
+
+As your project grows, you might want your CLI assistant to interact with external services---your database, design tools, or other APIs. This is where MCP (Model Context Protocol) comes in.
+
+MCP is a way to extend what your CLI assistant can access. Think of it as giving your CLI assistant permission and ability to connect to other tools.
+
+For example, with the right MCP setup, your CLI assistant could:
+
+- Query your database directly during conversations
+- Access your Figma designs to understand your UI
+- Read from or write to external APIs
+
+:::{.callout-tip}
+## Example Prompt
+"Can you connect to my database and show me how many users signed up last week?"
+:::
+
+This is advanced territory. Most projects don't need MCP, especially early on. But if you reach a point where you want tighter integration between your CLI assistant and other services, it's worth knowing this capability exists.
+
+MCP is evolving rapidly. Rather than providing detailed setup instructions here (which would quickly become outdated), ask your CLI assistant about current capabilities:
+
+:::{.callout-tip}
+## Example Prompt
+"What MCP integrations are available? Can you connect to [service I use]?"
+:::
+
+## Working with Technical Collaborators
+
+As your project grows, you might bring on developers---contractors, a technical co-founder, or a small team. They'll likely use different tools than you do.
+
+Here's what to know: your CLI workflow produces real, professional code. Developers can open your project in their preferred IDE, review what's there, and contribute using their usual process.
+
+### Onboarding Someone New
+
+When a developer joins your project, they'll want to understand its structure. Your CLI assistant can help:
+
+:::{.callout-tip}
+## Example Prompt
+"I'm bringing on a developer. Can you create a brief technical overview of this project---the main technologies, how it's structured, and how to get it running locally?"
+:::
+
+This gives your new collaborator a starting point. They can then explore the codebase using their own tools.
+
+### Reviewing Their Work
+
+Developers typically contribute through pull requests---proposed changes that you can review before they become part of your project. You learned about these in the version control chapter.
+
+:::{.callout-tip}
+## Example Prompt
+"A developer submitted a pull request. Can you review what they changed and explain it to me in plain terms? Are there any concerns?"
+:::
+
+Your CLI assistant can help you understand proposed changes even if you can't read the code directly.
+
+### Tool Differences Don't Matter
+
+Your developers might use VS Code, Cursor, JetBrains, or vim. They might prefer different AI assistants. None of this affects your ability to collaborate. Git---the version control system---is the common language. Changes flow through commits and pull requests regardless of which tools created them.
+
+You don't need to change your workflow to work with developers. Keep using your CLI assistant. Let them use whatever they prefer. The code is the same.
+
+## Evaluating New Tools
+
+The AI coding landscape changes constantly. New tools appear, existing ones add features, and today's hot product might be tomorrow's afterthought.
+
+Here's a framework for evaluating new tools as they emerge:
+
+**What problem does it solve?** Be specific. "It's AI-powered" isn't a problem statement. "It helps me see my project structure visually" is.
+
+**Do I actually have that problem?** If your current workflow is working, a new tool needs to offer a meaningful improvement, not just a different approach.
+
+**Does it replace my workflow or complement it?** Tools that complement what you're doing are easier to adopt. Tools that require changing everything are a bigger commitment.
+
+**What's the learning curve?** Time spent learning a new tool is time not spent building your product. Make sure the investment is worth it.
+
+**Is it production-ready?** New tools are often rough around the edges. Consider trying them on a side project first.
+
+When something new catches your attention, you can ask your CLI assistant for perspective:
+
+:::{.callout-tip}
+## Example Prompt
+"I keep hearing about [new tool]. What does it do, and would it help with projects like mine?"
+:::
+
+Avoid shiny object syndrome---the temptation to constantly switch to the newest thing. A stable workflow you know well beats a cutting-edge workflow you're still figuring out.
+
+## Your Toolkit, Your Choice
+
+The CLI approach you've learned throughout this book remains the foundation. You can build complete, professional applications without ever opening a code editor or installing desktop AI apps.
+
+Everything in this chapter is optional. Some of it might appeal to you; some might not. The right toolkit is the one that helps you get your work done.
+
+What transfers to any tool is what you've already learned: clear communication, good product thinking, iterative development, and the confidence to describe what you want and work toward it. Those skills don't depend on any particular software.
+
+The tools will keep evolving. New options will appear. Some will be genuinely useful; many will be noise. But your fundamental ability to work with AI to build things---that's yours now, regardless of which tools you choose to use.

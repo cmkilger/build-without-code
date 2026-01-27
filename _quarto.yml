@@ -21,6 +21,7 @@ book:
     - chapters/09-quality-assurance.qmd
     - chapters/10-deploying.qmd
     - chapters/11-growing-project.qmd
+    - chapters/12-expanding-toolkit.qmd
 
 format:
   html:
