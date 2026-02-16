@@ -13,15 +13,16 @@ book:
     - chapters/01-introduction.qmd
     - chapters/02-terminal-basics.qmd
     - chapters/03-installing-cli-assistant.qmd
-    - chapters/04-understanding-landscape.qmd
-    - chapters/05-designing-with-ai.qmd
-    - chapters/06-version-control.qmd
-    - chapters/07-building.qmd
-    - chapters/08-running-testing.qmd
-    - chapters/09-quality-assurance.qmd
-    - chapters/10-deploying.qmd
-    - chapters/11-growing-project.qmd
-    - chapters/12-expanding-toolkit.qmd
+    - chapters/04-understanding-models.qmd
+    - chapters/05-understanding-landscape.qmd
+    - chapters/06-designing-with-ai.qmd
+    - chapters/07-version-control.qmd
+    - chapters/08-building.qmd
+    - chapters/09-running-testing.qmd
+    - chapters/10-quality-assurance.qmd
+    - chapters/11-deploying.qmd
+    - chapters/12-growing-project.qmd
+    - chapters/13-expanding-toolkit.qmd
 
 format:
   html:

@@ -126,7 +126,7 @@ Smaller steps are easier to build, test, and debug.
 
 ## Using Plan Mode
 
-Plan mode is one of your CLI assistant's most powerful features. Instead of immediately writing code, your CLI assistant stops to think, research your codebase, and design an approach first.
+Plan mode is one of your CLI assistant's most powerful features. Instead of immediately writing code, your CLI assistant stops to think, research your codebase, and design an approach first. This pairs well with the extended thinking models we discussed in Chapter 4---plan mode is where that deep reasoning capability really shines.
 
 To enter plan mode, start your message with `/plan`:
 

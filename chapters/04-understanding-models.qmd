@@ -1,0 +1,111 @@
+# Understanding AI Models
+
+Your CLI assistant isn't powered by a single AI---it has access to several different AI models, each with different strengths. Think of it like having a team of people available to help you: some are fast and great for quick tasks, others take more time but excel at complex problems.
+
+You don't need to become an expert on models to build successfully. Most of the time, the default works great. But understanding your options helps you make better choices when it matters.
+
+## What Are Models?
+
+When you type a prompt into your CLI assistant, it sends your request to an AI model---a system that's been trained to understand code and conversation. Different models have been trained differently and have different capabilities, much like how different people have different skills.
+
+Your CLI tool lets you choose which model handles your requests. The model you pick affects how fast you get a response, how sophisticated that response is, and how much of your subscription it uses.
+
+## Speed, Quality, and Cost
+
+Every model balances three things:
+
+**Speed** is how quickly the model responds. Fast models are great for iteration---making small changes, asking quick questions, or refining something you've already built.
+
+**Quality** is how sophisticated the response is. Higher-quality models write cleaner code, understand more nuance in your requests, and handle complex problems better.
+
+**Cost** is how much of your subscription each request uses. Every request counts against your usage limits, and more powerful models use more of your allocation. If you're on a free tier, you'll hit limits faster with powerful models.
+
+Here's the key insight: you can't maximize all three. The most powerful model is slower and costs more. The fastest model is cheaper but less capable. The sweet spot depends on what you're doing right now.
+
+:::{.callout-note}
+## The Simple Version
+Use the default model for everything unless you have a specific reason not to. The default is specifically chosen as the best balance of speed, quality, and cost for most tasks.
+:::
+
+## Extended Thinking and Effort
+
+Some models have a feature called **extended thinking**---the ability to pause and reason through a problem step by step before responding. Think of it like the difference between answering off the top of your head versus sitting down to think it through carefully.
+
+Extended thinking is valuable when you're:
+
+- **Planning a complex feature** that touches many parts of your application
+- **Debugging a tricky issue** where the cause isn't obvious
+- **Making architectural decisions** about how your application should be structured
+- **Working on security-sensitive code** where mistakes matter more
+
+It's overkill for simple tasks like "make this button blue" or "fix this typo." For those, a quick response is better than a deeply considered one.
+
+Related to extended thinking is the concept of **effort**. Some models let you control how hard they think about a problem. Higher effort means deeper reasoning but slower responses and more subscription usage. Lower effort means faster, cheaper responses that are still good enough for straightforward tasks. Think of it like asking someone to give you a quick answer versus asking them to really think it through.
+
+When you use plan mode later in the book (Chapter 8), you're essentially asking your CLI assistant to think carefully before acting---a workflow that pairs well with extended thinking and higher effort.
+
+## Current Models
+
+Here's what's available in each CLI tool. Model names and capabilities change over time, so ask your CLI assistant what's currently available if you're unsure.
+
+:::{.callout-tip}
+## Example Prompt
+"What model am I currently using? What other models are available, and what are they best at?"
+:::
+
+### Claude Code
+
+Claude Code gives you access to Anthropic's Claude model family:
+
+- **Opus** is the most powerful model. It excels at complex reasoning, architectural decisions, and problems that require deep thinking. It's slower and uses more of your subscription, but it's the best choice when quality matters most. Opus supports adjustable effort levels (low, medium, and high) so you can control how deeply it reasons about each task.
+- **Sonnet** is the balanced option. It's fast enough for comfortable iteration and capable enough for most tasks. If you're on a pay-as-you-go API plan, this is your default.
+- **Haiku** is the fastest and most lightweight. It's great for simple edits, quick questions, and tasks where speed matters more than depth.
+
+Both Opus and Sonnet support extended thinking. You can switch models anytime with the `/model` command.
+
+Claude Code also offers a special **opusplan** mode that automatically uses Opus for planning and reasoning, then switches to Sonnet for writing code. This gives you the best of both worlds without switching manually.
+
+### OpenAI Codex CLI
+
+Codex CLI gives you access to OpenAI's GPT-Codex model family, which is purpose-built for coding:
+
+- **GPT-5.3-Codex** is the most capable model, combining strong coding performance with advanced reasoning. This is the current recommendation.
+- **GPT-5-Codex-Mini** is a smaller, more cost-effective option that gives you more usage from your subscription while still handling most coding tasks well.
+
+You can check your current model with `/status` and switch models with the `/model` command or the `--model` flag when starting a session.
+
+### GitHub Copilot CLI
+
+Copilot CLI defaults to Claude Sonnet 4.5 and also supports other models like GPT-5. You can switch models with the `/model` command, just like the other tools. GitHub may change the default model over time as newer models become available.
+
+## Choosing the Right Model
+
+**Start with the default.** Each CLI tool picks a sensible default that handles the vast majority of tasks well. You can build an entire application without ever changing it.
+
+**Switch to a more powerful model when:**
+
+- You're starting a new project and making foundational decisions
+- You're stuck on a complex bug that simpler attempts haven't solved
+- You're using plan mode for a significant feature
+- You're working on something security-sensitive like authentication or payments
+
+**Switch to a faster model when:**
+
+- You're making simple edits---changing colors, fixing typos, tweaking layout
+- You're iterating quickly and want rapid feedback
+- You're approaching your usage limits and want to stretch your subscription
+
+**How to switch:**
+
+All three CLI tools support the `/model` command to switch models during a session. Just type `/model` to see your options and pick one.
+
+:::{.callout-tip}
+## Example Prompt
+"I'm about to plan the architecture for my app. Should I switch to a more powerful model for this conversation?"
+:::
+
+Don't overthink it. Switching models takes seconds, and you can always switch back. Over time, you'll develop an intuition for which model fits which situation.
+
+## Next Steps
+
+Now that you understand the AI models powering your CLI assistant, let's look at the bigger picture---what a "tech stack" is and what the pieces of a modern application look like.

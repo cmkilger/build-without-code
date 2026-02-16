@@ -100,4 +100,4 @@ Each CLI has its own interactive workflow. Here are the basics you'll use most o
 
 ## Next Steps
 
-With your CLI installed and working, you're ready to start building. But first, let's make sure you understand the landscape---what a "tech stack" is and what the pieces of a modern application look like.
+With your CLI installed and working, you're ready to start building. But first, let's understand the AI models that power your CLI assistant---what they are, how they differ, and how to choose the right one for the task at hand.
